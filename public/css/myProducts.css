@@ -9,10 +9,31 @@
 	color: #CC00AA;
 }
 
-body {
-	background-color: red;
-}
-
 h1, h2, h3, h4, h5 {
 	color: #808080;
+}
+
+#backBtn {
+	
+}
+#productsTitle {
+
+}
+.productsContainer {
+	display: block;
+	width: 100%;
+	min-height: 200px;
+	border: 2px solid red;
+}
+.productLeft {
+	float: left;
+	width: 50%;
+	min-height: 200px;
+	border: 2px solid green;
+}
+.productRight {
+	float: right;
+	width: 50%;
+	min-height: 200px;
+	border: 2px solid blue;
 }
