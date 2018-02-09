@@ -54,8 +54,13 @@ h1, h2, h3, h4, h5 {
 	padding-top: 20px;
 }
 
-.cameraPicClass #cameraPic{
-	width:30px;
+.cameraPicClass{
+	float:right;
+}
+
+.dropDown{
+	float:left;
+	position: absolute;
 }
 
 #wrap{
