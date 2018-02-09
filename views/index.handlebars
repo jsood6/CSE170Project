@@ -1,31 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html>
+<html lange="en-US">
 <head>
 	<title>Test Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,
 	initial-scale=1.0">
+	<!-- importing css(bootstrap) files into html -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="./css/mainPage.css">
 
 </head>
 <body>
-	<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" class="img-responsive" width="50" height="50">
+	<div class="homeScreenContainer">
+		<div class="cameraPicClass">
+			<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic" style="width:60px;height:30px;">
+		</div>
+
+		<div class="dropdown">
+		  <button onclick="myFunction()" class="dropbtn"></button>
+		  <div id="myDropdown" class="dropdown-content">
+		    <a href="#">Link 1</a>
+		    <a href="#">Link 2</a>
+		    <a href="#">Link 3</a>
+		  </div>
+		</div>
+
+		<div class="homeContainer">	
+			<div class="homeIcon">
+				<h3>HOME</h3>
+			</div>
+			<div class="userFacePic">
+				<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="50" height="50">
+			</div>
+		</div>
+		<!-- The form -->
+		<div style="position:relative; top:20px" class="searchBar" align="right">
+			<form style="position:relative; left:20px; top:20px" action="action_page.php">
+			  <input type="text" placeholder="Search.." name="search">
+			  	<button type="submit" id="submitBtn"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+
+
+		<!-- rectangular boxes just like in the wireframes 
+		<div class="boxes1Container">
+			<div style="position:relative; left:30px; top:30px; width:100px;height:100px;background-color: #A9A9A9">
+			</div>
+			<div style="position:relative; left:60px; top:30px; width:100px;height:100px;background-color: #A9A9A9">
+			</div>
+		</div>-->
+
+		<div id="wrap">
+			<div style="position:relative; left:20px; top:75px" class="left"></div>
+			<div style="position:relative; left:20px; top:75px" class="right"></div>
+		</div>
+
+		<div id="wrap2">
+			<div style="position:relative; left:20px; top:150px" class="left2"></div>
+			<div style="position:relative; left:20px; top:150px" class="right2"></div>
+		</div>
+		
+		
+	</div> <!-- end of homePage container-->
+	<!--
+	<div class="searchBar">
+  		<input type="text" placeholder="Search..">
+	</div>
+	<button type="submit"><i class="fa fa-search"></i></button>
+		-->
+	
+
+	<!--<div class="form-group">
+		      <label for="name">Name:</label>
+		      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+		    </div>-->
 
 
 
 	<!-- importing javascript files into html -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="js/mainPage.js"></script>
 
-
-	<!-- importing css(bootstrap) files into html -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/mainPage.css" rel="stylesheet">
 
 
 </body>
