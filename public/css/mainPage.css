@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5 {
     
 }
 
-.searchBar #submitBtn {
+/*.searchBar #submitBtn {
 	max-width: 10px;
 	max-height: 10px;
 	background-color: #A9A9A9; 
@@ -45,6 +45,29 @@ h1, h2, h3, h4, h5 {
     color: white;
     padding: 15px 32px;
     text-align: center;
+}*/
+.searchBar {
+	position: absolute;
+	display: block;
+	margin: auto;
+	width: 90%;
+	
+}
+.searchForm {
+	position: relative;
+
+}
+#searchText {
+	position: relative;
+	float: left;
+	width: 85%;
+
+}
+#searchBtn {
+	position: relative;
+	float: right;
+	height: 30px;
+	top:7px;
 }
 
 .homeScreenContainer{
@@ -55,9 +78,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .cameraPicClass{
+	top: 0;
 	float:right;
 }
-
+#cameraPic {
+	width:90px;
+	height:auto;
+}
 .dropDown{
 	float:left;
 	position: absolute;

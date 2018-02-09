@@ -13,8 +13,11 @@ h1, h2, h3, h4, h5 {
 	color: #808080;
 }
 
+body {
+	margin: 10px;
+}
 #backBtn {
-	
+
 }
 #productsTitle {
 
@@ -23,17 +26,17 @@ h1, h2, h3, h4, h5 {
 	display: block;
 	width: 100%;
 	min-height: 200px;
-	border: 2px solid red;
+	border: 2px solid grey;
 }
 .productLeft {
 	float: left;
 	width: 50%;
 	min-height: 200px;
-	border: 2px solid green;
+	border: 2px solid grey;
 }
 .productRight {
 	float: right;
 	width: 50%;
 	min-height: 200px;
-	border: 2px solid blue;
+	border: 2px solid grey;
 }
