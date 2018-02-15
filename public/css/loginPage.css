@@ -6,11 +6,36 @@
 /* applies to any <p> descendants of an element of class "example-class-selector" */
 .example-class-selector p {
 	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
+	/*color: #CC00AA;*/
+
 }
 
+p{
+	color: grey;
+	text-align: center;
+	margin-top: 35%;
+	font-size: 30px;
+}
 
+#signOutBtn{
+	position: absolute;
+	top:40%;
+	left:35%;
+}
 
+#nextPageLoginBtn{
+	position: absolute;
+	top:40%;
+	left:60%;
+
+}
+
+.g-signin2{
+	
+	position: absolute;
+	top: 30%;
+	left: 34%;
+}
 
 h1, h2, h3, h4, h5 {
 	color: #808080;
