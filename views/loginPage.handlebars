@@ -41,28 +41,44 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+        var userSignedIn = true;
       };
     </script>
 
     <!-- sign out button-->
-    <button>
+    <button id="signOutBtn" style="display: none;">
     <a href="" onclick="signOut();">Sign out</a>
 	</button>
 
 	<script>
 	  function signOut() {
-	    var auth2 = gapi.auth2.getAuthInstance();
-	    auth2.signOut().then(function () {
-	      console.log('User signed out.');
-	    });
+	  	if(userSignedIn == true)
+	  	{
+	  		document.getElementById("signOutBtn").style.visibility = "visible";
+	  		var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () {
+		      console.log('User signed out.');
+	    	});
+
+	  	}
+	    
 	  }
 	</script>
 
 	<div id="nextPageLoginBtn">
-		<button>
-			<a href="/index">Log In</a>
+		<button style="display: none;">
+			<a href="/index">></a>
 		</button>
 	</div>
+
+	<script>
+		function displayNextPageBtn()
+		{
+			if (userSignedIn == true) {
+				document.getElementById("nextPageLoginBtn").style.visibility = "visible";
+			}
+		}
+	</script>
 
 
   
