@@ -35,11 +35,16 @@
 		<div class="cameraPicClass">
 			<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">
 			<button>
-				<input type="file" accept="image/*">
+				<span class="glyphicon glyphicon-camera" aria-hidden="true">
+				<input type="file" accept="image/*" capture="environment">
+				<script>
+				  const fileInput = document.getElementById('file-input');
+
+				  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+				</script>
 			</button>
 		</div>
 		
-
 		<div class="homeContainer">	
 			
 			<div class="homeIcon">
