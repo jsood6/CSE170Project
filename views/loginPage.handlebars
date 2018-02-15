@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lange="en-US">
+<head>
+	<title>Test Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1.0">
+	<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+	<!-- importing css(bootstrap) files into html -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="./css/loginPage.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+
+</head>
+<body>
+	<p>login page!</p>
+	<div id="button">
+		<button>
+			<a href="/index">Log In</a>
+		</button>
+	</div>
+
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  
+
+	<!--<form action="/index">
+		<input type="submit" value="Sign in">
+	</form>-->
+
+	<!--<button id="loginBtn" type="submit">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</button>-->
+	
+	<!-- importing javascript files into html -->
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!--<script src="js/bootstrap.min.js"></script>-->
+	<script src="js/loginPage.js"></script>
+	<script src="js/index.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer>		
+	</script>
+
+
+
+</body>
+</html>
+

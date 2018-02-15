@@ -8,6 +8,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+var loginPage = require('./routes/loginPage');
 var index = require('./routes/index');
 var myProducts = require('./routes/myProducts');
 // Example route
@@ -35,7 +36,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/',loginPage.view);
+app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
 // Example route
 // app.get('/users', user.list);
