@@ -44,7 +44,11 @@
       };
     </script>
 
-    <a href="#" onclick="signOut();">Sign out</a>
+    <!-- sign out button-->
+    <button>
+    <a href="" onclick="signOut();">Sign out</a>
+	</button>
+
 	<script>
 	  function signOut() {
 	    var auth2 = gapi.auth2.getAuthInstance();
@@ -53,6 +57,14 @@
 	    });
 	  }
 	</script>
+
+	<div id="nextPageLoginBtn">
+		<button>
+			<a href="/index">Log In</a>
+		</button>
+	</div>
+
+
   
 
 	<!--<form action="/index">
