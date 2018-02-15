@@ -51,23 +51,13 @@
     <a href="" onclick="signOut();">Sign out</a>
 	</button>
 
-	<script>
-		document.getElementById("signOutBtn").style.visibility = "hidden";
-	</script>
 
 	<script>
 	  function signOut() {
-	  	print(userSignedIn);
-
-	  	if(userSignedIn == true)
-	  	{
-	  		document.getElementById("signOutBtn").style.visibility = "visible";
 	  		var auth2 = gapi.auth2.getAuthInstance();
 		    auth2.signOut().then(function () {
 		      console.log('User signed out.');
 	    	});
-
-	  	}
 	    
 	  }
 	</script>
@@ -81,7 +71,7 @@
 	<script>
 		function displayNextPageBtn()
 		{
-			if (userSignedIn == true) {
+			if (document.getElementById("signOutBtn").style.visibility == "visible") {
 				document.getElementById("nextPageLoginBtn").style.visibility = "visible";
 			}
 		}
