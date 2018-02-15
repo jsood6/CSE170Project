@@ -47,9 +47,13 @@
     </script>
 
     <!-- sign out button-->
-    <button id="signOutBtn" style="display: none;">
+    <button id="signOutBtn">
     <a href="" onclick="signOut();">Sign out</a>
 	</button>
+
+	<script>
+		document.getElementById("signOutBtn").style.visibility = "hidden";
+	</script>
 
 	<script>
 	  function signOut() {
