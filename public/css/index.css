@@ -55,11 +55,11 @@ h1, h2, h3, h4, h5 {
     
 }
 
-.cameraPicClass button{
+/*.cameraPicClass button{
 	max-width: 200px;
 
 
-}
+}*/
 
 .cameraPicClass > img {
 	max-width: 30px;
