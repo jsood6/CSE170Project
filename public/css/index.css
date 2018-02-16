@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5 {
 
 .topnav {
     background-color: #333;
-    overflow: hidden;
+    
 }
 
 .cameraPicClass button{
 	max-width: 200px;
-	
+
 
 }
 
