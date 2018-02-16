@@ -48,12 +48,15 @@
 
 
     <!-- sign out button-->
-    <a href="" role="button" onclick="signOut();" id="signOutBtn">
+    <!--<a href="" role="button" onclick="signOut();" id="signOutBtn">-->
+    <button id="signOutBtn">
+     	<a href="" onclick="signOut();">Sign out</a>
+ 	</button>
 
 	<!-- function for signout button -->
 	<script>
 		
-		  if(userSignedIn === false)
+		  /*if(userSignedIn === false)
 		  {
 		  	$("#signOutBtn").hide();
 
@@ -61,9 +64,8 @@
 		  else
 		  {
 		  	$("#signOutBtn").show();
-		  }
+		  }*/
 
-		
 	  function signOut() {
 	  		var auth2 = gapi.auth2.getAuthInstance();
 		    auth2.signOut().then(function () {
@@ -76,9 +78,14 @@
 	</script>
 
 	<!-- button to go to next page(main home page) from the login page-->
-	<a href="/index" role="button" id="nextPageLoginBtn">
+	<!--<a href="/index" role="button" id="nextPageLoginBtn">-->
+		<div id="nextPageLoginBtn">		
+			<button>
+ 				<a href="/index">></a>
+ 			</button>
+ 		</div>
 
-	<script>
+	<!--<script>
 		  if(userSignedIn === false)
 		  {
 		  	$("#nextPageLoginBtn").hide();
@@ -87,11 +94,11 @@
 		  else
 		  {
 		  	$("#nextPageLoginBtn").show();
-		  }
+		  }-->
 
 		
 
-	</script>
+	<!--</script>-->
 
 
   
