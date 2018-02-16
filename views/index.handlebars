@@ -16,34 +16,41 @@
 
 </head>
 <body>
+
+	<div id="indexToLoginPage">
+			  <form>
+			  	<input type="button" value="<" onclick="history.back()">
+			  </form>
+	</div>
 	<div class="homeScreenContainer">
-		<!--<div class="cameraPicClass">
-			<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">
-		</div>-->
 		
-		<div class="dropdown">
-		  <button onclick="myFunction()" class="dropbtn">
-		  	<span class="glyphicon glyphicon-menu-hamburger"></span>
-		  </button>
-		  <div id="myDropdown" class="dropdown-content">
-		    <a href="/myProducts">My Products</a>
-		    <a href="#">Settings</a>
-		    <a href="#">Link 3</a>
-		  </div>
-		</div>
-		
-		<div class="cameraPicClass">
-			<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">
+
+		<div class="topnav">
+			<div class="dropdown">
+			  <button onclick="myFunction()" class="dropbtn">
+			  	<span class="glyphicon glyphicon-menu-hamburger"></span>
+			  </button>
+			  <div id="myDropdown" class="dropdown-content">
+			    <a href="/myProducts">My Products</a>
+			    <a href="#">Settings</a>
+			    <a href="#">Link 3</a>
+			  </div>
+			</div>
+
+		  <div class="cameraPicClass">
+			<!--<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">-->
 			<button>
 				<span class="glyphicon glyphicon-camera" aria-hidden="true">
 				<input type="file" accept="image/*" capture="environment">
 				<script>
 				  const fileInput = document.getElementById('file-input');
 
-				  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+				  /*fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));*/
 				</script>
 			</button>
 		</div>
+
+		</div> <!-- end of navBar-->
 		
 		<div class="homeContainer">	
 			
@@ -67,7 +74,57 @@
 			</form>
 		</div>
 
-		<div id="wrap">
+		<div class="firstRowPic1">
+				<a href="https://www.youtube.com">
+					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+				</a>
+		</div>
+
+		<!--<div class="firstRowContainer">
+			<div class="firstRowPic1">
+				<a href="https://www.youtube.com">
+					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+				</a>
+			</div>
+			<div class="firstRowPic2">
+				<a href="https://www.youtube.com">
+					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+				</a>
+			</div>
+
+		</div>-->
+
+
+		{{#each videos}}
+		<div class="videos">
+			<a href="https://www.youtube.com">
+				<img src="{{imageURL}}" class="img-responsive">
+			</a>	
+			
+		</div>
+		{{/each}}
+
+		
+		<a href="https://www.youtube.com">YouTube</a>
+		
+
+		<div class="firstRowPic2">
+				<a href="http://www.youtube.com">
+					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+				</a>
+		</div>
+		<!--
+		{{#each videos2}}
+		<div class="videos2">
+			<a href="https://www.youtube.com">
+				<img src="{{imageURL}}" class="img-responsive">
+			</a>	
+			
+		</div>
+		{{/each}} -->
+
+
+		<!--<div id="wrap">
 			<div style="position:relative; left:20px; top:75px" class="left"></div>
 			<div style="position:relative; left:20px; top:75px" class="right"></div>
 		</div>
@@ -75,11 +132,10 @@
 		<div id="wrap2">
 			<div style="position:relative; left:20px; top:150px" class="left2"></div>
 			<div style="position:relative; left:20px; top:150px" class="right2"></div>
-		</div>
+		</div>-->
 		
-		
-	</div> <!-- end of homePage container-->
-	
+	</div><!-- end of homeScreen container-->
+
 	<!-- importing javascript files into html -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
