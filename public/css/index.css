@@ -15,16 +15,11 @@
 }*/
 
 .videos img{
-	max-width: 100px;
+	max-width: 340px;
 	margin-top:10px;
 
 }
 
-.videos2 img{
-	max-width: 100px;
-	margin-top:10px;
-
-}
 
 #indexToLoginPageBtn{
 	top:20px;
@@ -34,16 +29,11 @@
 
 .firstRowPic1{
 	margin-top: 50px;
-	max-width: 100px;
+	max-width: 340px;
 	
 }
 
-.firstRowPic2{
-	margin-top: -220px;
-	margin-left: 150px;
-	max-width: 100px;
-	
-}
+
 
 
 h1, h2, h3, h4, h5 {
