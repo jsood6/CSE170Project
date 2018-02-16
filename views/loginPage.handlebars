@@ -28,7 +28,7 @@
 
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
-    	 var userSignedIn = false;
+      var userSignedIn = false;
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -53,11 +53,25 @@
 
 	<!-- function for signout button -->
 	<script>
+		function userLoggedIn(){
+		  if(userSignedIn === false)
+		  {
+		  	$(".facebookLogin").hide();
+
+		  }
+		  else
+		  {
+		  	$(".facebookLogin").show();
+		  }
+
+		}
 	  function signOut() {
 	  		var auth2 = gapi.auth2.getAuthInstance();
 		    auth2.signOut().then(function () {
 		      console.log('User signed out.');
 	    	});
+
+	    	userSignedIn = false;
 	    
 	  }
 	</script>

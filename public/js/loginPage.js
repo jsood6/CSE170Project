@@ -16,3 +16,5 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+
+
