@@ -9,47 +9,113 @@
 	color: #CC00AA;
 }
 
-/*.img-responsive{
-	position: absolute;
-	top:300px;
-}*/
+.scrolling-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position:absolute;
+  display:block;
+  top:100px;
+  left:0;
+  width:350px;
+  max-height:500px;
+  margin:0;
+  /*background:#abc;*/
+  background:transparent;
+
+
+}
+
+.scrolling-wrapper img {
+    
+    display: inline-block;
+    
+    margin: 10px;
+    max-width: 200px;
+  }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+.card {
+    display: inline-block;
+  }
+
+.videoContainer{
+	
+	margin-top: 250px
+	
+}
 
 .videos img{
 	max-width: 340px;
 	margin-top:10px;
+	margin-left: 15px;
 
+}
+
+#navbar{
+	top:10px;
+
+}
+
+.grey{
+	color:grey;
+
+}
+
+#navbar input{
+	background-color: white;
+}
+
+#navbar button{
+	position: absolute;
+	background-color:transparent;
+
+}
+
+#searchBtn{
+	position: absolute;
+	right:20px;
+	
+}
+
+.navbar-text{
+	position: absolute;
+	height: 29px;	
+	width: 93px;	
+	color: #9B9B9B;	
+	font-family: Helvetica;	
+	font-size: 24px;	
+	top:-15px;
+	left:150px;
+	
 }
 
 
 #indexToLoginPageBtn{
 	top:20px;
+	float:left;
+
+}
+
+.homeIcon h3{
+	float:right;
 
 }
 
 
-.firstRowPic1{
-	margin-top: 50px;
-	max-width: 340px;
-	
-}
-
-
+/*.dropdown button{
+	background-color: white;
+}*/
 
 
 h1, h2, h3, h4, h5 {
 	color: #808080;
 }
 
-.topnav {
-    background-color: #333;
-    
-}
-
-/*.cameraPicClass button{
-	max-width: 200px;
-
-
-}*/
 
 .cameraPicClass > img {
 	max-width: 30px;
@@ -58,19 +124,15 @@ h1, h2, h3, h4, h5 {
     right: 0px;
 }
 
-.dropbtn{
-	background-color: grey;
-	
-}
 
-.homeScreenContainer{
+/*.homeScreenContainer{
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
 	padding-top: 20px;
 
-}
+}*/
 
 .homeContainer {
 	text-align: center;
@@ -116,12 +178,13 @@ h1, h2, h3, h4, h5 {
 	width: 90%;
 
 }
+
 #searchBtn {
 	position: relative;
 	float: right;
 	height: 30px;
 	width: 30px;
-	top:7px;
+	/*top:7px;*/
 }
 
 
@@ -140,41 +203,7 @@ h1, h2, h3, h4, h5 {
 	left:0px;
 }
 
-#wrap{
-	width:300px;
-}
 
-.left{
-	width:130px;
-	background-color: #A9A9A9;
-	height:100px;
-	float:left;
-}
-
-.right{
-	width:130px;
-	background-color: #A9A9A9;
-	height:100px;
-	float:right;
-}
-
-#wrap2{
-	width:300px;
-}
-
-.left2{
-	width:130px;
-	background-color: #A9A9A9;
-	height:100px;
-	float:left;
-}
-
-.right2{
-	width:130px;
-	background-color: #A9A9A9;
-	height:100px;
-	float:right;
-}
 
 /* Dropdown Button */
 .dropbtn {

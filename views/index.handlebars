@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,
 	initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 360px)" >
 	<!-- importing css(bootstrap) files into html -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -15,29 +16,57 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 
 </head>
-<body>
+<body class="homePage">
 
-	<div id="indexToLoginPage">
+	<!--<div id="indexToLoginPage">
 			  <form>
 			  	<input type="button" value="<" onclick="history.back()">
 			  </form>
-	</div>
+	</div>-->
 	<div class="homeScreenContainer">
 		
+		<nav class="navbar navbar-light bg-faded" id="navbar">
+		  <form class="form-inline">
+		  	<input type="button" value="<<" onclick="history.back()">
 
-		<div class="topnav">
-			<div class="dropdown">
-			  <button onclick="myFunction()" class="dropbtn">
+		    <button onClick="location.href='/myProducts'" class="btn btn-outline-success" type="button">
+		    	<span class="glyphicon glyphicon-user grey"></span>
+		    </button>
+		    <span class="navbar-text">HOME</span>
+		    <button class="btn btn-outline-success" id="searchBtn" type="button">
+		    	<span class="glyphicon glyphicon-search grey"></span>
+		    </button>
+		  </form>
+
+
+		</nav>
+
+		<!--	<li>
+			<div id="indexToLoginPage">
+			  <form>
+			  	<input type="button" value="<" onclick="history.back()">
+			  </form>
+			</div>
+			</li>
+
+			<li>
+				<div class="homeIcon">
+				<h3>HOME</h3>
+				</div>
+			</li>-->
+
+			<!--<div class="dropdown">
+			  <button onclick="myFunction()" class="dropbtn" color="white">
 			  	<span class="glyphicon glyphicon-menu-hamburger"></span>
 			  </button>
 			  <div id="myDropdown" class="dropdown-content">
 			    <a href="/myProducts">My Products</a>
 			    <a href="#">Settings</a>
 			  </div>
-			</div>
+			</div>-->
 
-		  <div class="cameraPicClass">
-			<!--<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">-->
+		  <!--<div class="cameraPicClass">
+			<img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83" alt="Camera" id="cameraPic">
 			<button>
 				<span class="glyphicon glyphicon-camera" aria-hidden="true">
 				<input type="file" accept="image/*">
@@ -47,15 +76,13 @@
 				  /*fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));*/
 				</script>
 			</button>
-		</div>
+		</div>-->
 
 		</div> <!-- end of navBar-->
 		
 		<div class="homeContainer">	
 			
-			<div class="homeIcon">
-				<h3>HOME</h3>
-			</div>
+			
 
 			<!--<div class="userFacePic">
 				<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="50" height="50">
@@ -63,20 +90,28 @@
 
 		</div><!-- end of home container-->
 
-		<!-- The form -->
-		<div class="searchBar" align="right">
+		<div class="scrolling-wrapper">
+		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+
+		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+
+		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+
+		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+
+		</div>
+
+		<!-- SEARCHBAR -->
+		<!--<div class="searchBar" align="right">
 			<form class="searchForm" action="action_page.php">
 			  <input id="searchText" type="text" placeholder="Search.." name="search">
 			  <button id="searchBtn" type="submit" id="submitBtn">
 			  	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 			  </button>
 			</form>
-		</div>
+		</div>-->
 
-		<div class="firstRowPic1">
-				<a href="https://www.youtube.com/watch?v=lP9ZrGtvVuU">
-				<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive"></a>
-		</div>
+		
 
 		<!--<div class="firstRowContainer">
 			<div class="firstRowPic1">
@@ -93,13 +128,17 @@
 		</div>-->
 
 
+		<div class="videoContainer">
 		{{#each videos}}
 		<div class="videos">
-			<a href="https://www.youtube.com">
+			<a href="/video">
 				<img src="{{imageURL}}" class="img-responsive">
+				
+				<!--<iframe src="https://www.youtube.com/embed/_geV3WesbP8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 			</a>		
 		</div>
 		{{/each}}
+		</div>
 
 		
 		<!--<a href="https://www.youtube.com/watch?v=lP9ZrGtvVuU">
