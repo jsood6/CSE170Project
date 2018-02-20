@@ -36,10 +36,12 @@
 
     <script>
       var userSignedIn = false;
+      var userID;
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+
         console.log('Full Name: ' + profile.getName());
         console.log('Given Name: ' + profile.getGivenName());
         console.log('Family Name: ' + profile.getFamilyName());
@@ -62,21 +64,13 @@
 
 	<!-- function for signout button -->
 	<script>
-		
-		  /*if(userSignedIn === false)
-		  {
-		  	$("#signOutBtn").hide();
-
-		  }
-		  else
-		  {
-		  	$("#signOutBtn").show();
-		  }*/
 
 	  function signOut() {
 	  		var auth2 = gapi.auth2.getAuthInstance();
+
 		    auth2.signOut().then(function () {
 		      console.log('User signed out.');
+		      
 	    	});
 
 	    	userSignedIn = false;
@@ -130,6 +124,7 @@
 	<script src="js/index.js"></script>
 	<script src="https://apis.google.com/js/platform.js" async defer>		
 	</script>
+
 
 
 
