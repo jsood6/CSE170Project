@@ -15,6 +15,11 @@
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<link rel="stylesheet" type="text/css" href="/css/video.css">
 
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 </head>
 <body>
 	<!--<p id="backBtn"><a href="/index">Back</a></p>-->
@@ -31,6 +36,16 @@
 	<div class="videoSize">
 		<iframe src="{{link}}" target="_parent"></iframe>
 	</div>
+
+	<!-- Use an element to toggle between a like/dislike icon -->
+	<i onclick="myFunction(this)" style="color: purple; size: 50px;" class="fa fa-thumbs-up"></i>
+
+	<script>
+		function myFunction(x) {
+	    x.classList.toggle("fa-thumbs-down");
+		}
+	</script>
+	
 
 	<p style="color: pink">
 		Face:
