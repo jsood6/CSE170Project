@@ -24,17 +24,13 @@
 	<div class="loginPageContainer">
 	<div class="beauti">
 		<p>BEAUTI</p>
-	</div>
-	<!--<div id="button">
-		<button>
-			<a href="/index">Log In</a>
-		</button>
-	</div>-->
-
-    <div class="g-signin2" id="loginBtn" data-onsuccess="onSignIn" data-theme="light"></div>
+	</div> 
+    
+    <div class="g-signin2" id="loginBtn" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
+    
 	
 
-    <script>
+    <!--<script>
       var userSignedIn = false;
       var userID;
       function onSignIn(googleUser) {
@@ -53,16 +49,18 @@
         console.log("ID Token: " + id_token);
         userSignedIn = true;
       };
-    </script>
+    </script>-->
 
 
     <!-- sign out button-->
     <!--<a href="" role="button" onclick="signOut();" id="signOutBtn">-->
+    
     <button id="signOutBtn">
      	<a href="" onclick="signOut();">Sign out</a>
  	</button>
+ 	
 
-	<!-- function for signout button -->
+	<!-- function for signout button 
 	<script>
 
 	  function signOut() {
@@ -76,34 +74,17 @@
 	    	userSignedIn = false;
 	    
 	  }
-	</script>
+	</script>-->
 
 	<!-- button to go to next page(main home page) from the login page-->
-	<!--<a href="/index" role="button" id="nextPageLoginBtn">-->
 		<div id="nextPageLoginBtn">		
 			<button>
  				<a href="/index">></a>
  			</button>
  		</div>
 
-	<!--<script>
-		  if(userSignedIn === false)
-		  {
-		  	$("#nextPageLoginBtn").hide();
 
-		  }
-		  else
-		  {
-		  	$("#nextPageLoginBtn").show();
-		  }-->
-
-		
-
-	<!--</script>-->
-
-	
-
-</div>
+	</div> <!-- end of login page container-->
 
 
   

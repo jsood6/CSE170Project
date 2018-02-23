@@ -29,7 +29,7 @@
 		  <form class="form-inline">
 		  	<input type="button" value="<<" onclick="history.back()">
 
-		    <button onClick="location.href='/myProducts'" class="btn btn-outline-success" type="button">
+		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
 		    	<span class="glyphicon glyphicon-user grey"></span>
 		    </button>
 		    <span class="navbar-text">HOME</span>
@@ -90,14 +90,27 @@
 
 		</div><!-- end of home container-->
 
+		<div class="popularVideosText" style="font-size: 8; text-align: center; color: pink">
+		check out the most popular tutorials of the year!
+		</div>
 		<div class="scrolling-wrapper">
-		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+		  	<div class="topRatedVideos">
+		  		<iframe src="https://www.youtube.com/embed/aCubTWCCl5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		  		<iframe src="https://www.youtube.com/embed/oKQbHNR6YtQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		  		<iframe src="https://www.youtube.com/embed/ZmJch5mlQSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		  		<iframe src="https://www.youtube.com/embed/u1M2VcWE18g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		  		<iframe src="https://www.youtube.com/embed/_qdNub2-Q1w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+
+		  <!--<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
 
 		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
 
-		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
-
-		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
+		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">-->
 
 		</div>
 
@@ -128,17 +141,29 @@
 		</div>-->
 
 
-		<div class="videoContainer">
+		<!--<div class="videoContainer">
 		{{#each videos}}
 		<div class="videos">
 			<a href="/video">
 				<img src="{{imageURL}}" class="img-responsive">
-				
-				<!--<iframe src="https://www.youtube.com/embed/_geV3WesbP8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 			</a>		
 		</div>
+		{{/each}} -->
+
+		<div class="videoContainer">
+			<div class="popularVideosText" style="font-size: 8; text-align: center; color: pink">
+			click on the pics to see step by step tutorial!
+			</div>
+		{{#each videos}}
+			<div class="videos" id="{{id}}">
+					<a href="/video/{{id}}">
+						<img src="{{imageURL}}" class="img-responsive">
+					</a>
+			</div>
 		{{/each}}
 		</div>
+
+		
 
 		
 		<!--<a href="https://www.youtube.com/watch?v=lP9ZrGtvVuU">

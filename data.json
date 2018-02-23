@@ -1,36 +1,36 @@
 {
 	"videos": [
 		{
+			"id":1,
 			"imageURL": "https://static.pexels.com/photos/458766/pexels-photo-458766.jpeg",
 			"link": "https://www.youtube.com/embed/_geV3WesbP8?rel=0"
+			
+					
 		},
 		{
-			
+			"id":2,
 			"imageURL": "https://static.pexels.com/photos/119959/pexels-photo-119959.jpeg",
-			"link": "https://www.youtube.com/watch?v=_geV3WesbP8"				
+			"link": "https://www.youtube.com/embed/uHyLsKEDx5w"				
 		},
 		{
-			
+			"id":3,
 			"imageURL": "https://static.pexels.com/photos/6393/red-woman-girl-brown.jpg",
-			"link": "https://www.youtube.com/watch?v=_geV3WesbP8"				
+			"link": "https://www.youtube.com/embed/Ag6h5DLmAA0" 			
 		},
 		{
-			
+			"id":4,
 			"imageURL": "https://static.pexels.com/photos/247287/pexels-photo-247287.jpeg",
-			"link": "https://www.youtube.com/watch?v=_geV3WesbP8"				
+			"link": "https://www.youtube.com/embed/12hkeHTi0ZI"			
 		},
 		{
-			
+			"id":5,
 			"imageURL": "https://static.pexels.com/photos/6169/woman-hand-girl-professional.jpg",
-			"link": "https://www.youtube.com/watch?v=_geV3WesbP8"				
-		},
-		{
-			
-			"imageURL": "https://static.pexels.com/photos/730055/pexels-photo-730055.jpeg",
-			"link": "https://www.youtube.com/watch?v=_geV3WesbP8"				
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
 		}
 
 		
 	]
+
 }
+
 

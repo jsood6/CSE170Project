@@ -1,4 +1,4 @@
-
+ 
 /**
  * Module dependencies.
  */
@@ -40,7 +40,7 @@ if ('development' == app.get('env')) {
 app.get('/',loginPage.view);
 app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
-app.get('/video', video.view);
+app.get('/video/:id', video.view);
 // Example route
 // app.get('/users', user.list);
 

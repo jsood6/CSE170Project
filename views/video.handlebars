@@ -7,33 +7,66 @@
 	<meta name="viewport" content="width=device-width,
 	initial-scale=1.0">
 	<!-- importing css(bootstrap) files into html -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">-->
-	<link rel="stylesheet" type="text/css" href="./css/loginPage.css">
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<link rel="stylesheet" type="text/css" href="./css/video.css">
-	<!-- "../public/css/myProducts.css"-->
+	<!--<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/loginPage.css">-->
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/video.css">
 
 </head>
 <body>
 	<!--<p id="backBtn"><a href="/index">Back</a></p>-->
-	<p>VIDEO</p>
-	<form>
-	  <input type="button" value="<" onclick="history.back()">
-	</form>
-	
 
-	<iframe src="https://www.youtube.com/embed/_geV3WesbP8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<nav class="navbar navbar-light bg-faded" id="navbar">
+		  <form class="form-inline">
+	  		<input type="button" value="<" onclick="history.back()">
+	  		<span class="navbar-text">VIDEO</span>
+	  	</form>
+	</nav>
+
+	
+	
+	<div class="videoSize">
+		<iframe src="{{link}}" target="_parent"></iframe>
+	</div>
+
+	<p style="color: pink">
+		Face:
+		Rimmel London Match Perfection Foundation (Ivory) 
+		Maybelline Superstay 24hr Concealer 
+		LA Girl Pro Conceal ( Porcelain ) 
+		Rimmel Stay Matte Powder ( Transparent ) 
+		MakeupRevolution Ultra Sculpt and Contour Kit ( Ultra Fair C01)
+		the Balm Balm Voyage Vol. 2 palette ( blush and highlighter )<br><br> 
+
+		Brows:
+		Anastasia Beverly Hills Dipbrow Pomade (Medium Brown)<br><br> 
+
+		Eyes: 
+		the Balm Balm Voyage Vol. 2 pallete 
+		Essence Essence Liquid Ink Eyeliner 
+		Essence Gel Eye Pencil (Cocoa Bean) <br><br>
+
+		Lips: 
+		NYX Round Lipstick ( Frappucino ) 
+	</p>
+
+
+	<!--<div>
+		<iframe src="{{link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>-->
+
 	
 	<!-- importing javascript files into html -->
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<!--<script src="js/bootstrap.min.js"></script>-->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!--<script src="js/jquery-1.11.0.js"></script>-->
+	<!--<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/loginPage.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/video.js"></script>
+	<script src="js/index.js"></script>-->
+	<script src="/js/video.js"></script>
 	
 
 

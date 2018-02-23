@@ -8,7 +8,7 @@
 	initial-scale=1.0">
 	<!-- importing css(bootstrap) files into html -->
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet"> 
 	<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">-->
 	<link rel="stylesheet" type="text/css" href="./css/loginPage.css">
@@ -22,20 +22,79 @@
 	<form>
 	  <input type="button" value="<" onclick="history.back()">
 	</form>
-	<h3 id="productsTitle">PRODUCTS PAGE</h3>
-	<script>
-		function checkUserProfile(profile){
-			console.log(profile);
-		}
-	</script>
-	{{#each userProfiles}}
-	<div class="profilePic">
-			
-		<img src=userProfiles[0] class="img-responsive">
-				
+	
+	<div class="topPageContainer">
+		<h3 id="productsTitle">My Profile</h3>
+		<div class="userFacePic">
+			<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="100" height="100">
+		</div>
 	</div>
-	{{/each}}
-		
+	
+	
+	<div class="tabsContainer">
+	<!-- Tab links -->
+	<div class="tab">
+	  <button class="tablinks" onclick="openCity(event, 'userProducts')">4 Products</button>
+	  <button class="tablinks" onclick="openCity(event, 'userLooks')">5 Looks</button>
+	</div>
+
+	<!-- Tab content -->
+	<div id="userProducts" class="tabcontent">
+		 <div class="productsContainer">
+
+		 	<img src="https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit" class="img-responsive">
+
+		 	<img src="https://images-na.ssl-images-amazon.com/images/I/41uRZi7nxWL._SY450_.jpg" class="img-responsive">
+
+		 	<img src="https://www.snupps.com/api/2.9/users/1094649/items/8253741/views/7826402-1.1024.jpg" class="img-responsive">
+
+		 	<img src="https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" class="img-responsive">
+
+			<!--{{#each products}}
+			<div class="products">
+				<img src="{{imageURL}}" class="img-responsive">		
+			</div>
+			{{/each}}-->
+
+
+
+
+			<!--<div class="productLeft">
+				<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
+			</div>
+			
+			<div class="pruductRight">
+				<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
+			</div>-->
+		</div>
+			<!--<div  class="productsContainer">
+				<div class="productLeft">
+					<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
+				</div>
+				<div class="pruductRight">
+					<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
+				</div>
+			</div>-->
+		<!--<div class="productsContainer">
+			<div class="productLeft"><p>5</p></div>
+			<div class="pruductRight"><p>6</p></div>
+		</div>-->
+	</div>
+
+	<div id="userLooks" class="tabcontent">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">
+
+		<img src="http://shortyawards.com.s3.amazonaws.com/entries/8th/screen-shot-2016-01-18-at-51154-p.png" class="img-responsive">
+
+		<img src="https://www.thefamouspeople.com/profiles/images/rachel-levin-1.jpg" class="img-responsive">
+
+		<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg:large" class="img-responsive">
+
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">		
+	  
+	</div>
+
+	</div>
 
 
 	<!--<div class="productsContainer">
@@ -60,7 +119,10 @@
 	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="js/loginPage.js"></script>
 	<script src="js/index.js"></script>
+
 	<script src="js/myProducts.js"></script>
+
+
 
 
 

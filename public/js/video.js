@@ -7,7 +7,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).find('h3').text(anagrammedName($(this).find('h3').text()));
 	});*/
-})
+});
 
 /*
  * Function that is called when the document is ready.
@@ -15,4 +15,6 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 }
+
+
 

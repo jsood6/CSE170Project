@@ -1,6 +1,24 @@
 
-var data = require('../data.json');
-exports.view = function(req, res){
-	
-	res.render('video',data);
-};
+var data = require('../data.json')['videos'];
+
+exports.videoInfo = function(request, response) { 
+	var videoID = request.params.id;
+	var video = getVideoData(videoID);
+  	response.json(video);
+}
+
+exports.view = function(request, response) {
+	var videoID = request.params.id;
+	var video = getVideoData(videoID);
+	response.render('video', video);
+}
+
+function getVideoData(videoID) {
+	if (videoID == "random") {
+		videoID = Math.floor(Math.random() * data.length) + 1;
+	} else {
+		videoID = parseInt(videoID);
+	}
+  	var video = data[videoID-1]; // of by one, our first video has index 0
+  	return video;	
+}
