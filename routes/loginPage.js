@@ -33,7 +33,7 @@ exports.addUser = function(req,res){
 
 	};
 
-	console.log();
+	//console.log(newFriend);
 	data.userProfiles.push(newFriend);
 }
 

@@ -43,13 +43,14 @@ function onSignIn(googleUser) {
 	console.log("ID Token: " + id_token);
 
 	userSignedIn = true;
+	window.location.href = "https://a7-beauti.herokuapp.com/index";
 	$('#signOutBtn').show();
 	$('#nextPageLoginBtn').show();
 
 }
 
 
-function signOut() {
+/*function signOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
 	console.log(auth2);
 
@@ -63,7 +64,7 @@ function signOut() {
 	$('#nextPageLoginBtn').hide();
 
 	    
-}
+}*/
 
 
 

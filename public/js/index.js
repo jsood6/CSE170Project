@@ -40,4 +40,19 @@ window.onclick = function(event) {
   }
 }
 
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  console.log(auth2);
+
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+          
+  });
+
+  userSignedIn = false;
+  $('#signOutBtn').hide();
+  $('#nextPageLoginBtn').hide();
+
+      
+}
 

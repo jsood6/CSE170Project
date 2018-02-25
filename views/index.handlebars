@@ -27,7 +27,10 @@
 		
 		<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
-		  	<input type="button" value="<<" onclick="history.back()">
+		  	<!--<input type="button" value="<<" onclick="history.back()">-->
+		  	<button id="signOutBtn">
+		     	<a href="" onclick="signOut();">Sign out</a>
+		 	</button>
 
 		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
 		    	<span class="glyphicon glyphicon-user grey"></span>
