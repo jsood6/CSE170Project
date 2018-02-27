@@ -8,7 +8,10 @@
 	initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" media="screen and (max-width: 360px)" >
 	<meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="699556467015-1ek431j2vanuc3ojrvjr5c78a8gqj212.apps.googleusercontent.com">
+    <!--<meta name="google-signin-client_id" content="699556467015-1ek431j2vanuc3ojrvjr5c78a8gqj212.apps.googleusercontent.com">-->
+    <meta name="google-signin-client_id" content="699556467015-1gleonhv31evqt8aftrgcnmljf44dlvo.apps.googleusercontent.com">
+    
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
 
 	<!-- importing css(bootstrap) files into html -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -28,53 +31,11 @@
     
     <div class="g-signin2" id="loginBtn" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
     
-	
 
-    <!--<script>
-      var userSignedIn = false;
-      var userID;
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-        userSignedIn = true;
-      };
-    </script>-->
-
-
-    <!-- sign out button-->
-    <!--<a href="" role="button" onclick="signOut();" id="signOutBtn">-->
-    
-    <!--<button id="signOutBtn">
+    <button id="signOutBtn">
      	<a href="" onclick="signOut();">Sign out</a>
- 	</button>-->
+ 	</button>
  	
-
-	<!-- function for signout button 
-	<script>
-
-	  function signOut() {
-	  		var auth2 = gapi.auth2.getAuthInstance();
-
-		    auth2.signOut().then(function () {
-		      console.log('User signed out.');
-		      
-	    	});
-
-	    	userSignedIn = false;
-	    
-	  }
-	</script>-->
 
 	<!-- button to go to next page(main home page) from the login page-->
 		<div id="nextPageLoginBtn">		
@@ -87,15 +48,27 @@
 	</div> <!-- end of login page container-->
 
 
-  
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<!--<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyD5j9eVne2AowwZeSZLYsl_04Lg_FkECa0",
+	    authDomain: "cse170-makeup-ap-1518681818974.firebaseapp.com",
+	    databaseURL: "https://cse170-makeup-ap-1518681818974.firebaseio.com",
+	    projectId: "cse170-makeup-ap-1518681818974",
+	    storageBucket: "cse170-makeup-ap-1518681818974.appspot.com",
+	    messagingSenderId: "699556467015"
+	  };
+	  firebase.initializeApp(config);
+	</script>-->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
-	<!--<form action="/index">
-		<input type="submit" value="Sign in">
-	</form>-->
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>
 
-	<!--<button id="loginBtn" type="submit">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	</button>-->
 	
 	<!-- importing javascript files into html -->
 	<script src="js/jquery-1.11.0.js"></script>
@@ -103,8 +76,7 @@
 	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="js/loginPage.js"></script>
 	<script src="js/index.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer>		
-	</script>
+		
 
 
 

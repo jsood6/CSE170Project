@@ -20,6 +20,9 @@ exports.addFriend = function(req, res) { 
  */
 
 var data = require("../userProfiles.json");
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
 
 exports.view = function(req, res){
   res.render('loginPage');

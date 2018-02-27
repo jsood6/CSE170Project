@@ -1,10 +1,22 @@
 'use strict';
+var provider = new firebase.auth.GoogleAuthProvider();
 
 var userSignedIn;
 
 var userID;
 
 var googleuser;
+
+var config = {
+	    apiKey: "AIzaSyD5j9eVne2AowwZeSZLYsl_04Lg_FkECa0",
+	    authDomain: "cse170-makeup-ap-1518681818974.firebaseapp.com",
+	    databaseURL: "https://cse170-makeup-ap-1518681818974.firebaseio.com",
+	    projectId: "cse170-makeup-ap-1518681818974",
+	    storageBucket: "cse170-makeup-ap-1518681818974.appspot.com",
+	    messagingSenderId: "699556467015"
+	  };
+
+firebase.initializeApp(config);
 
 
 // Call this function when the page loads (the "ready" event)
@@ -24,9 +36,19 @@ function initializePage() {
 	
 }
 
+function onSignIn(){
+	firebase.auth().signInWithPopup(provider).then(function(result){
+		var token = result.credential.accessToken;
+		var user = result.user;
+		console.log(user.displayName);
+
+	});
+	$('#signOutBtn').show();
+	$('#nextPageLoginBtn').show();
+}
 
 
-function onSignIn(googleUser) {
+/*function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
 	var profile = googleUser.getBasicProfile();
 	console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -43,14 +65,41 @@ function onSignIn(googleUser) {
 	console.log("ID Token: " + id_token);
 
 	userSignedIn = true;
-	window.location.href = "https://a7-beauti.herokuapp.com/index";
+	//window.location.href = "/index";
 	$('#signOutBtn').show();
 	$('#nextPageLoginBtn').show();
+	//$('#loginBtn').hide();
 
-}
+}*/
 
+/*function onSignIn(googleUser) {
+  console.log('Google Auth Response', googleUser);
+  // We need to register an Observer on Firebase Auth to make sure auth is initialized.
+  var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+    unsubscribe();
+    // Check if we are already signed-in Firebase with the correct user.
+    if (!isUserEqual(googleUser, firebaseUser)) {
+      // Build Firebase credential with the Google ID token.
+      var credential = firebase.auth.GoogleAuthProvider.credential(
+          googleUser.getAuthResponse().id_token);
+      // Sign in with credential from the Google user.
+      firebase.auth().signInWithCredential(credential).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    } else {
+      console.log('User already signed-in Firebase.');
+    }
+  });
+}*/
 
-/*function signOut() {
+function signOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
 	console.log(auth2);
 
@@ -62,9 +111,10 @@ function onSignIn(googleUser) {
 	userSignedIn = false;
 	$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
+	//$('#loginBtn').show();
 
 	    
-}*/
+}
 
 
 

@@ -34,26 +34,67 @@
 	<div class="tabsContainer">
 	<!-- Tab links -->
 	<div class="tab">
-	  <button class="tablinks" onclick="openCity(event, 'userProducts')">4 Products</button>
-	  <button class="tablinks" onclick="openCity(event, 'userLooks')">5 Looks</button>
+	  <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'userProducts')">Products</button>
+	  <button class="tablinks" onclick="openCity(event, 'userLooks')">Looks</button>
 	</div>
 
 	<!-- Tab content -->
 	<div id="userProducts" class="tabcontent">
 		 <div class="productsContainer">
 
-		 	<button onclick="alertFunc()">
+		 	<button id="uploadFile" onclick="uploadFile()">
 		 		<span class="glyphicon glyphicon-plus"></span>
 		 	</button>
 
-		 	<div class="cameraPicClass">
+		 	<div class="cameraPicClass" id="cameraFile">
 					<button>
 						<span class="glyphicon glyphicon-camera" aria-hidden="true">
-						<input type="file" accept="image/*">
+						<input type="file" accept="image/*" id="file-input">
 						<img id="output">
 						<script>
 
-						
+						const fileInput = document.getElementById('file-input');
+						function sendPic(){
+							var file = fileInput.files[0];
+						}
+
+  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+
+  						/*fileInput.addEventListener('change', sendPic, false);*/
+
+  						const output = document.getElementById('output');
+
+						  function doSomethingWithFiles(fileList) {
+						    let file = null;
+
+						    for (let i = 0; i < fileList.length; i++) {
+						      if (fileList[i].type.match(/^image\//)) {
+						        file = fileList[i];
+						        break;
+						      }
+						    }
+
+						    if (file !== null) {
+						      output.src = URL.createObjectURL(file);
+						      var ref = firebase.storage().ref();
+						      var childRef = ref.child(output.src);
+						      childRef.put(file).then(function(snapshot){
+						      	console.log('uploaded a file!');
+						      });
+
+						    }
+						  }
+
+						  function uploadFile(){
+						  var storageRef = firebase.storage().ref('/looks');
+						  $("#cameraFile").on("change", function(event){
+						  file = event.target.files[0]; });
+						  var filename = file.name;
+						}
+
+
+
+
 						</script>
 					</button>
 			</div>
@@ -81,29 +122,8 @@
 			</div>
 			{{/each}}-->
 
-
-
-
-			<!--<div class="productLeft">
-				<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
-			</div>
-			
-			<div class="pruductRight">
-				<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
-			</div>-->
 		</div>
-			<!--<div  class="productsContainer">
-				<div class="productLeft">
-					<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
-				</div>
-				<div class="pruductRight">
-					<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
-				</div>
-			</div>-->
-		<!--<div class="productsContainer">
-			<div class="productLeft"><p>5</p></div>
-			<div class="pruductRight"><p>6</p></div>
-		</div>-->
+
 	</div>
 
 	<div id="userLooks" class="tabcontent">
@@ -121,24 +141,8 @@
 
 	</div>
 
-
-	<!--<div class="productsContainer">
-		<div class="productLeft">
-			<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1481306057000/photosp/d4bf04c0-4673-4471-9833-0783dcffd35e/stock-photo-colorful-beauty-cosmetics-colors-brush-makeup-style-beauty-care-eyeshadow-d4bf04c0-4673-4471-9833-0783dcffd35e.jpg" class="img-responsive">
-		</div>
-		
-		<div class="pruductRight"><p>2</p></div>
-	</div>
-	<div  class="productsContainer">
-		<div class="productLeft"><p>3</p></div>
-		<div class="pruductRight"><p>4</p></div>
-	</div>
-	<div class="productsContainer">
-		<div class="productLeft"><p>5</p></div>
-		<div class="pruductRight"><p>6</p></div>
-	</div>-->
-
 	<!-- importing javascript files into html -->
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<!--<script src="js/bootstrap.min.js"></script>-->

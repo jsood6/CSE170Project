@@ -1,9 +1,11 @@
 'use strict';
+var file;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-
+  document.getElementById("defaultOpen").click();
+  
 	/*$('.friend a').click(function(e){
 		e.preventDefault();
 		$(this).find('h3').text(anagrammedName($(this).find('h3').text()));
@@ -69,7 +71,22 @@ function openCity(evt, cityName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+    
 }
+
+/*$("#cameraFile").on("change", function(event){
+  file = event.target.files[0];
+
+});*/
+
+/*function uploadFile(){
+  var storageRef = firebase.storage().ref('/looks');
+  $("#cameraFile").on("change", function(event){
+  file = event.target.files[0]; });
+  var filename = file.name;
+
+
+}*/
 
 
 

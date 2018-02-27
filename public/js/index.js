@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+  //$('#signOutBtn').show();
   
 	/*$('.friend a').click(function(e){
 		e.preventDefault();
@@ -40,19 +41,24 @@ window.onclick = function(event) {
   }
 }
 
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  console.log(auth2);
-
-  auth2.signOut().then(function () {
+/*function signOut() {
+  //var auth2 = gapi.auth2.getAuthInstance();
+  //console.log(auth2);
+  //alert("yo");
+ /* auth2.signOut().then(function () {
     console.log('User signed out.');
           
   });
-
+ 
   userSignedIn = false;
+  //window.location.href = "https://a7-beauti.herokuapp.com";
   $('#signOutBtn').hide();
-  $('#nextPageLoginBtn').hide();
+  //$('#nextPageLoginBtn').hide();*/
 
       
-}
+//}
+
+/*function hideSignOutBtn(){
+  ('#signOutBtn').hide();
+}*/
 
