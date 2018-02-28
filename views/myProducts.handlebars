@@ -42,7 +42,7 @@
 	<div id="userProducts" class="tabcontent">
 		 <div class="productsContainer">
 
-		 	<button id="uploadFile" onclick="alertFunc()">
+		 	<button id="uploadFile" onclick="uploadFile()">
 		 		<span class="glyphicon glyphicon-plus"></span>
 		 	</button>
 
@@ -53,16 +53,16 @@
 						<img id="output">
 						<script>
 
-						/*const fileInput = document.getElementById('file-input');
+						const fileInput = document.getElementById('file-input');
 						function sendPic(){
 							var file = fileInput.files[0];
 						}
 
-  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));*/
+  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
 
   						/*fileInput.addEventListener('change', sendPic, false);*/
 
-  						/*const output = document.getElementById('output');
+  						const output = document.getElementById('output');
 
 						  function doSomethingWithFiles(fileList) {
 						    let file = null;
@@ -90,7 +90,7 @@
 						  $("#cameraFile").on("change", function(event){
 						  file = event.target.files[0]; });
 						  var filename = file.name;
-						}*/
+						}
 
 
 
@@ -142,7 +142,7 @@
 	</div>
 
 	<!-- importing javascript files into html -->
-	<!--<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>-->
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<!--<script src="js/bootstrap.min.js"></script>-->

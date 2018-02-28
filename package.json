@@ -2,13 +2,11 @@
   "name": "IntroHCI",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
-
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/jsood6/CSE170Project"
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -16,11 +14,9 @@
   "dependencies": {
     "express": "3.x",
     "express3-handlebars": "*",
-    "mongodb": "*",
-    "mongoose": "*"
+    "firebase": "^4.8.2"
   },
   "engines": {
-    "node": "*",
-    "npm" : "y.y.y"
-  }  
+    "node": "0.10.x"
+  }
 }
