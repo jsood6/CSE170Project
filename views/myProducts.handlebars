@@ -42,72 +42,6 @@
 	<div id="userProducts" class="tabcontent">
 		 <div class="productsContainer">
 
-		 	<button id="uploadFile" onclick="uploadFile()">
-		 		<span class="glyphicon glyphicon-plus"></span>
-		 	</button>
-
-		 	<div class="cameraPicClass" id="cameraFile">
-					<button>
-						<span class="glyphicon glyphicon-camera" aria-hidden="true">
-						<input type="file" accept="image/*" id="file-input">
-						<img id="output">
-						<script>
-
-						const fileInput = document.getElementById('file-input');
-						function sendPic(){
-							var file = fileInput.files[0];
-						}
-
-  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
-
-  						/*fileInput.addEventListener('change', sendPic, false);*/
-
-  						const output = document.getElementById('output');
-
-						  function doSomethingWithFiles(fileList) {
-						    let file = null;
-
-						    for (let i = 0; i < fileList.length; i++) {
-						      if (fileList[i].type.match(/^image\//)) {
-						        file = fileList[i];
-						        break;
-						      }
-						    }
-
-						    if (file !== null) {
-						      output.src = URL.createObjectURL(file);
-						      var ref = firebase.storage().ref();
-						      var childRef = ref.child(output.src);
-						      childRef.put(file).then(function(snapshot){
-						      	console.log('uploaded a file!');
-						      });
-
-						    }
-						  }
-
-						  function uploadFile(){
-						  var storageRef = firebase.storage().ref('/looks');
-						  $("#cameraFile").on("change", function(event){
-						  file = event.target.files[0]; });
-						  var filename = file.name;
-						}
-
-
-
-
-						</script>
-					</button>
-			</div>
-
-			<script>
-			function alertFunc() {
-			    alert("Add a photo! (still under construction, sorry!)");
-				
-			}
-
-			</script>
-
-
 		 	<img src="https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit" class="img-responsive">
 
 		 	<img src="https://images-na.ssl-images-amazon.com/images/I/41uRZi7nxWL._SY450_.jpg" class="img-responsive">
@@ -127,6 +61,89 @@
 	</div>
 
 	<div id="userLooks" class="tabcontent">
+
+		<!-- Trigger/Open The Modal -->
+			<button id="myBtn">Add Look</button>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			  	<h3><b>Select or take a selfie to record your makeup look!</h3>
+			  	<span class="close" aria-hidden="true">&times;</span>
+
+			    <div class="modal-content-container">
+			    	
+			  	    
+			    
+				
+
+			    <!--<span class="close" style="opacity: 0.1;">&times;</span>-->
+			    
+			    <button id="uploadFile" onclick="uploadFile()">
+			    	Upload file!
+		 		</button>
+
+		 	<div class="cameraPicClass" id="cameraFile">
+					<button>
+						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+						<input type="file" accept="image/*" id="file-input">
+					</button>
+						<img id="output">
+						<script>
+
+						let file;
+						const fileInput = document.getElementById('file-input');
+						function sendPic(){
+							var file = fileInput.files[0];
+						}
+
+  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+
+  						/*fileInput.addEventListener('change', sendPic, false);*/
+
+  						const output = document.getElementById('output');
+
+						  function doSomethingWithFiles(fileList) {
+						    file = null;
+
+						    for (let i = 0; i < fileList.length; i++) {
+						      if (fileList[i].type.match(/^image\//)) {
+						        file = fileList[i];
+						        break;
+						      }
+						    }
+
+						    if (file !== null) {
+						      output.src = URL.createObjectURL(file);
+						      var ref = firebase.storage().ref('/looks');
+						      var childRef = ref.child(output.src);
+						      childRef.put(file).then(function(snapshot){
+						      	console.log('uploaded a file!');
+						      });
+
+						    }
+						  }
+
+						  function uploadFile(){
+						  var storageRef = firebase.storage().ref('/looks');
+						  $("#cameraFile").on("change", function(event){
+						  file = event.target.files[0]; });
+						  var filename = file.name;
+						}
+
+						</script>
+					<!--</button>-->
+			</div><!-- end of cameraPic class-->
+
+			  </div>
+			</div><!-- end of modal content-->
+
+
+			</div><!-- end of modal class-->
+
+		
 		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">
 
 		<img src="http://shortyawards.com.s3.amazonaws.com/entries/8th/screen-shot-2016-01-18-at-51154-p.png" class="img-responsive">
@@ -143,6 +160,7 @@
 
 	<!-- importing javascript files into html -->
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<!--<script src="js/bootstrap.min.js"></script>-->
