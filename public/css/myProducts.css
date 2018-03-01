@@ -9,10 +9,12 @@
 	color: #CC00AA;
 }
 
-h1, h2, h3, h4, h5 {
-	color: #808080;
-	font-size: 4;
-	max-width: 150px;
+h1, h2, h4, h5 {
+	color: #808080;	
+}
+
+h3{
+	color: pink;
 }
 
 body {
@@ -143,7 +145,10 @@ body {
 .modal-content {
     
     margin: 50% auto; /* 15% from the top and centered */
-    padding: 100px;
+    padding-bottom:150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -186,21 +191,85 @@ body {
 	left:20px;
 }*/
 
-.modal-content-container button{
-	top:-100px;
-	background-color: blue;
-	
-	left:20px;
+.modal-content-container #uploadFile{
+	position: absolute;
+	background-color: pink;
+	color: white;
+	left:150px;
+	top: 210px;
 }
 
 .modal-content #cameraFile{
 	position: absolute;
-	background-color: red;
-	top:300px;
-	left:20px;
+	top:150px;
+	max-width: 100px;
 }
 
 .myBtn{
+	position: absolute;
+	margin-left: 100px;
+	background-color: pink;
+}
+
+.modalProducts {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content/Box */
+.modal-content-products {
+    
+    margin: 50% auto; /* 15% from the top and centered */
+    padding-bottom:150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closeProducts {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	background: #606061;
+	line-height: 25px;
+	position: absolute;
+	right: 5px;
+	text-align: center;
+	top: 2px;
+	width: 24px;
+	text-decoration: none;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+
+}
+
+.closeProducts:hover,
+.closeProducts:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+
+.myBtnProducts{
 	position: absolute;
 	margin-left: 100px;
 	background-color: pink;

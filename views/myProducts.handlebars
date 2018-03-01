@@ -24,7 +24,7 @@
 	</form>
 	
 	<div class="topPageContainer">
-		<h3 id="productsTitle">My Profile</h3>
+		<h2 id="productsTitle">My Profile</h2>
 		<div class="userFacePic">
 			<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="100" height="100">
 		</div>
@@ -41,6 +41,26 @@
 	<!-- Tab content -->
 	<div id="userProducts" class="tabcontent">
 		 <div class="productsContainer">
+
+		 	<!-- Trigger/Open The Modal -->
+			<button id="myBtnProducts">Add Product</button>
+
+			<!-- The Modal -->
+			<div id="myModalProducts" class="modalProducts">
+
+			  <!-- Modal content -->
+			  <div class="modal-content-products">
+			  	<span class="closeProducts" aria-hidden="true">&times;</span>
+			  	<h3><b>Add a product</h3>
+
+			    <div class="modal-content-products-container">
+
+
+			  </div><!-- end of modal content container-->
+			</div><!-- end of modal content-->
+
+
+			</div><!-- end of modal class-->
 
 		 	<img src="https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit" class="img-responsive">
 
@@ -74,17 +94,8 @@
 			  	<span class="close" aria-hidden="true">&times;</span>
 
 			    <div class="modal-content-container">
-			    	
-			  	    
-			    
-				
 
-			    <!--<span class="close" style="opacity: 0.1;">&times;</span>-->
 			    
-			    <button id="uploadFile" onclick="uploadFile()">
-			    	Upload file!
-		 		</button>
-
 		 	<div class="cameraPicClass" id="cameraFile">
 					<button>
 						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
@@ -136,6 +147,10 @@
 						</script>
 					<!--</button>-->
 			</div><!-- end of cameraPic class-->
+
+			<button id="uploadFile" onclick="uploadFile()">
+			    	Upload selected file!
+		 		</button>
 
 			  </div>
 			</div><!-- end of modal content-->
