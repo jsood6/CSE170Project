@@ -1,6 +1,6 @@
 
 //var data = require('../userProfiles.json');
-var productsData = require('../data.json');
+var productsData = require('../products.json');
 
 exports.view = function(req, res){
 	
