@@ -14,6 +14,7 @@ var loginPage = require('./routes/loginPage');
 var index = require('./routes/index');
 var myProducts = require('./routes/myProducts');
 var video = require('./routes/video');
+var addProducts = require('./routes/addProducts');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,6 +44,7 @@ app.get('/',loginPage.view);
 app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
 app.get('/video/:id', video.view);
+app.get('/addProducts', addProducts.addProducts);
 // Example route
 // app.get('/users', user.list);
 

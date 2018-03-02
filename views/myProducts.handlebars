@@ -15,13 +15,13 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" type="text/css" href="./css/myProducts.css">
 	<!-- "../public/css/myProducts.css"-->
-
+ 
 </head>
 <body>
-	<!--<p id="backBtn"><a href="/index">Back</a></p>-->
-	<form>
+	<button id="backBtn"><a href="/index"><</a></button>
+	<!--<form>
 	  <input type="button" value="<" onclick="history.back()">
-	</form>
+	</form>-->
 	
 	<div class="topPageContainer">
 		<h2 id="productsTitle">My Profile</h2>
@@ -43,32 +43,42 @@
 		 <div class="productsContainer">
 
 		 	<!-- Trigger/Open The Modal -->
-			<button id="myBtnProducts">Add Product</button>
+			
+			<button id="myBtnProducts">Add a Product</button>
 
 			<!-- The Modal -->
 			<div id="myModalProducts" class="modalProducts">
 
-			  <!-- Modal content -->
+			  <!--Modal content -->
 			  <div class="modal-content-products">
 			  	<span class="closeProducts" aria-hidden="true">&times;</span>
 			  	<h3><b>Add a product</h3>
 
 			    <div class="modal-content-products-container">
+			    	<form id="addBtnForm" role="form" method="get" action="/addProducts">	
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!"></input>
+			</form>
 
 
-			  </div><!-- end of modal content container-->
-			</div><!-- end of modal content-->
+			  </div> <!--end of modal content container-->
+			</div> <!--end of modal content-->
 
 
-			</div><!-- end of modal class-->
+			</div> <!--end of modal class-->
 
-		 	<img src="https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit" class="img-responsive">
+			{{#each products}}
+			<div class="productsInProfile">
+				<img src="{{imageURL}}" class="img-responsive">
+			</div>
+			{{/each}}
+
+		 	<!--<img src="https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit" class="img-responsive">
 
 		 	<img src="https://images-na.ssl-images-amazon.com/images/I/41uRZi7nxWL._SY450_.jpg" class="img-responsive">
 
 		 	<img src="https://www.snupps.com/api/2.9/users/1094649/items/8253741/views/7826402-1.1024.jpg" class="img-responsive">
 
-		 	<img src="https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" class="img-responsive">
+		 	<img src="https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" class="img-responsive">-->
 
 			<!--{{#each products}}
 			<div class="products">
@@ -158,8 +168,12 @@
 
 			</div><!-- end of modal class-->
 
-		
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">
+		{{#each looks}}
+		<div class="looksInProfile">
+			<img src="{{imageURL}}" class="img-responsive">
+		</div>
+		{{/each}}
+		<!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">
 
 		<img src="http://shortyawards.com.s3.amazonaws.com/entries/8th/screen-shot-2016-01-18-at-51154-p.png" class="img-responsive">
 
@@ -167,7 +181,7 @@
 
 		<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg:large" class="img-responsive">
 
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">-->		
 	  
 	</div>
 
