@@ -24,6 +24,7 @@
 </head>
 <body class="login_page">
 
+	{{#if viewAlt}}
 	<div class="loginPageContainer">
 	<div class="beauti" style="font-size: 500%; color: white; font-family: helvetica;">
 		<p>BEAUTI</p>
@@ -87,6 +88,33 @@
 
 			</div> <!-- end of modal class-->
 
+	{{else}}
+
+	<div class="loginPageContainer">
+	<div class="beauti">
+		<p>BEAUTI</p>
+	</div> 
+    
+    <div class="g-signin2" id="loginBtn" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
+    
+
+    <button id="signOutBtn">
+     	<a href="" onclick="signOut();">Sign out</a>
+ 	</button>
+ 	
+
+	<!-- button to go to next page(main home page) from the login page-->
+		<div id="nextPageLoginBtn">		
+			<button>
+ 				<a href="/index">></a>
+ 			</button>
+ 		</div>
+
+	</div> <!-- end of login page container-->
+
+
+	{{/if}}
+
 
 
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
@@ -102,7 +130,7 @@
 	    messagingSenderId: "699556467015"
 	  };
 	  firebase.initializeApp(config);-->
-	</script>
+	
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>

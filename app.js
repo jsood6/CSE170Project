@@ -8,7 +8,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var loginPage = require('./routes/loginPage');
 var index = require('./routes/index');
@@ -40,10 +40,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 } 
 
-app.get('/',loginPage.view);
+app.get('/', loginPage.view);
+app.get('/viewAlt', loginPage.viewAlt);
 app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
-app.get('/viewAlt', myProducts.viewAlt);
 app.get('/video/:id', video.view);
 app.get('/addProducts', addProducts.addProducts);
 // Example route
