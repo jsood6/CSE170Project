@@ -13,8 +13,7 @@ var handlebars = require('express3-handlebars')
 var loginPage = require('./routes/loginPage');
 var index = require('./routes/index');
 var myProducts = require('./routes/myProducts');
-var myProductsVersionB = require('./routes/myProductsVersionB');
-var video = require('./routes/video');
+var video = require('./routes/video'); 
 var addProducts = require('./routes/addProducts');
 // Example route
 // var user = require('./routes/user');
@@ -39,12 +38,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
-}
+} 
 
 app.get('/',loginPage.view);
 app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
-app.get('/myProductsVersionB', myProductsVersionB.view);
+app.get('/viewAlt', myProducts.viewAlt);
 app.get('/video/:id', video.view);
 app.get('/addProducts', addProducts.addProducts);
 // Example route

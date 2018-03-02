@@ -18,6 +18,10 @@
  
 </head>
 <body>
+
+	{{#if viewAlt}}
+	<p>hi!!</p>
+	{{else}}
 	<button id="backBtn"><a href="/index"><</a></button>
 	<!--<form>
 	  <input type="button" value="<" onclick="history.back()">
@@ -186,6 +190,8 @@
 	</div>
 
 	</div>
+	
+	{{/if}}
 
 	<!-- importing javascript files into html -->
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>

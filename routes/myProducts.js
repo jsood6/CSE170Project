@@ -6,3 +6,8 @@ exports.view = function(req, res){
 	
 	res.render('myProducts', productsData);
 }; 
+
+exports.viewAlt = function(request, response){
+	
+	response.render('myProducts', productsData);
+}
