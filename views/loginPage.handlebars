@@ -24,7 +24,6 @@
 </head>
 <body class="login_page">
 
-	{{#if viewAlt}}
 	<div class="loginPageContainer">
 	<div class="beauti">
 		<p>BEAUTI</p>
@@ -47,6 +46,7 @@
 
 	</div> <!-- end of login page container-->
 
+	{{#if viewAlt}}
 	<div class="helpTagLine">
  		
  		Learn new makeup looks with your existing products!
@@ -89,30 +89,7 @@
 			</div> <!-- end of modal class-->
 
 	{{else}}
-
-	<div class="loginPageContainer">
-	<div class="beauti">
-		<p>BEAUTI</p>
-	</div> 
-    
-    <div class="g-signin2" id="loginBtn" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
-    
-
-    <button id="signOutBtn">
-     	<a href="" onclick="signOut();">Sign out</a>
- 	</button>
- 	
-
-	<!-- button to go to next page(main home page) from the login page-->
-		<div id="nextPageLoginBtn">		
-			<button>
- 				<a href="/index">></a>
- 			</button>
- 		</div>
-
-	</div> <!-- end of login page container-->
-
-
+	
 	{{/if}}
 
 

@@ -33,7 +33,7 @@ exports.viewAlt = function(request, response){
 	response.render('loginPage');
 };
 
-exports.addUser = function(req,res){
+/*exports.addUser = function(req,res){
 	var newFriend = {
 		"userName": googleuser.getName(),
 		"userID": googleuser.getID(),
@@ -43,7 +43,7 @@ exports.addUser = function(req,res){
 
 	//console.log(newFriend);
 	data.userProfiles.push(newFriend);
-}
+}*/
 
 
 /*exports.addUser= function(req, res) {    
