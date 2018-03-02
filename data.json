@@ -26,9 +26,32 @@
 			"id":5,
 			"imageURL": "https://static.pexels.com/photos/6169/woman-hand-girl-professional.jpg",
 			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
-		}
-
-		
+		},
+		{
+			"id":6,
+			"imageURL": "https://images.pexels.com/photos/247295/pexels-photo-247295.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+		},
+		{
+			"id":7,
+			"imageURL": "https://images.pexels.com/photos/220423/pexels-photo-220423.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+		},
+		{
+			"id":8,
+			"imageURL": "https://images.pexels.com/photos/46279/brown-brown-eyes-iris-gene-46279.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+		},
+		{
+			"id":9,
+			"imageURL": "https://images.pexels.com/photos/371117/pexels-photo-371117.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+		},
+		{
+			"id":10,
+			"imageURL": "https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+		}	
 	]
 
 }

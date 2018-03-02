@@ -32,22 +32,32 @@
 		
 		<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
-		  	<input type="button" value="<<" onclick="history.back()">
+		  	<!--input type="button" value="<<" onclick="history.back()">
 		  	<!--<button id="signOutBtn">
 		     	<a href=" " onclick="signOut();hideSignOutBtn();">Sign out</a>
 		 	</button>-->
 
+		  <!--log out button-->
+		  <form align="left" name="form1" method="post" action="log_out.php">
+  		  <label class="logoutLblPos">
+  		  <input name="submit2" type="submit" id="submit2" value="Sign Out">
+  		  </label>
+		  </form>
+
 		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
 		    	<span class="glyphicon glyphicon-user grey"></span>
 		    </button>
-		    <span class="navbar-text">HOME</span>
+		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: black; font-family: helvetica;">
+		    BEAUTI</div>
 		    <button class="btn btn-outline-success" id="searchBtn" type="button">
 		    	<span class="glyphicon glyphicon-search grey"></span>
 		    </button>
+		    <div class="line"></div>
 		  </form>
 
 
 		</nav>
+
 
 		<!--	<li>
 			<div id="indexToLoginPage">
@@ -98,8 +108,8 @@
 
 		</div><!-- end of home container-->
 
-		<div class="popularVideosText" style="font-size: 8; text-align: center; color: pink">
-		check out the most popular tutorials of the year!
+		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">
+		RECOMMENDED FOR YOU
 		</div>
 		<div class="scrolling-wrapper">
 		  	<div class="topRatedVideos">
@@ -121,6 +131,7 @@
 		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">-->
 
 		</div>
+		<div class="line2"></div>
 
 		<!-- SEARCHBAR -->
 		<!--<div class="searchBar" align="right">
@@ -159,8 +170,8 @@
 		{{/each}} -->
 
 		<div class="videoContainer">
-			<div class="popularVideosText" style="font-size: 8; text-align: center; color: pink">
-			click on the pics to see step by step tutorial!
+			<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">
+			CHOOSE YOUR LOOK
 			</div>
 		{{#each videos}}
 			<div class="videos" id="{{id}}">

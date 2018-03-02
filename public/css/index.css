@@ -12,42 +12,63 @@
 
 
 .scrolling-wrapper {
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*//
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   position:absolute;
   display:block;
-  top:100px;
+  top:120px;
   left:0;
-  width:350px;
+  width:360px;
   max-height:500px;
   margin:0;
   /*background:#abc;*/
   background:transparent;
-
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
 }
 
 .scrolling-wrapper div {
+
+	-webkit-overflow-scrolling: touch;
     
     display: inline-block;
     
-    margin: 10px;
+    margin: 17px;
     max-width: 200px;
   }
 
-::-webkit-scrollbar {
-    display: none;
-  }
 
 .card {
     display: inline-block;
   }
 
-.videoContainer{
+.logoutLblPos{
+   position:fixed;
+   left:20px;
+   top:7px;
+}
+
+.videoContainer {
+  margin-top: 180px;
+  width: 375px;
+}
+
+.videos img{
+  float: left;
+  max-width: 165px;
+  max-height: 150px;
+  margin-top:10px;
+  margin-left: 15px;
+}
+
+
+/*.videoContainer{
 	
-	margin-top: 250px
+	margin-top: 180px;
 	
 }
 
@@ -56,19 +77,19 @@
 	margin-top:10px;
 	margin-left: 15px;
 
-}
+}*/
 
 #navbar{
 	top:10px;
 
 }
 
-#navbar #signOutBtn{
+/*#navbar #signOutBtn{
 	position: absolute;
 	
 	float: left;
 	
-}
+}*/
 
 .grey{
 	color:grey;
@@ -98,28 +119,45 @@
 
 #userProfileBtn {
 	position: absolute;
-	left: 75px;
-	border: 1px solid #b3b3b3;
-	border-radius: 70%;
+	left: 30px;
+	top:25px;
+	/*border: 1px solid #b3b3b3;
+	border-radius: 70%;*/
 	padding: 2px 5px;
 }
 
 #navbar #searchBtn{
 	position: absolute;
+	top:25px;
 	right:20px;
+	padding: 2px 5px;
 	
 }
 
 .navbar-text{
-	position: absolute;
+	/*position: absolute;
 	height: 29px;	
 	width: 93px;	
 	color: #9B9B9B;	
 	font-family: Helvetica;	
 	font-size: 24px;	
 	top:-15px;
-	left:150px;
+	left:150px;*/
 	
+}
+
+.line{
+width: 375px;
+top:63px;
+border-bottom: 1px solid black;
+position: absolute;
+}
+
+.line2{
+width: 375px;
+top:300px;
+border-bottom: 1px solid black;
+position: absolute;
 }
 
 
@@ -165,6 +203,7 @@ h1, h2, h3, h4, h5 {
 
 .homeContainer {
 	text-align: center;
+	margin-top: -20px
 
 }
 
