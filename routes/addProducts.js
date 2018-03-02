@@ -2,7 +2,7 @@ var productsData = require("../products.json");
 
 exports.addProducts = function(req, res){
 	var newProduct = {
-		"imageURL" : 'http://lorempixel.com/400/400/people',
+		"imageURL" : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOeK6MExynZT7tEYFipQaFxqPzXyjlzRyG7suMcewbzgIdLfrLjQ',
 		"productName" : " "
 	};
 
