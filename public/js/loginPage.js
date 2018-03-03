@@ -24,7 +24,7 @@ $(document).ready(function() {
 	initializePage();
 	$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
-	
+
 	
 });
 
@@ -53,6 +53,7 @@ function onSignIn(googleUser) {
   // We need to register an Observer on Firebase Auth to make sure auth is initialized.
   var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
     unsubscribe();
+    console.log(googleUser.getBasicProfile());
     // Check if we are already signed-in Firebase with the correct user.
     if (!isUserEqual(googleUser, firebaseUser)) {
       // Build Firebase credential with the Google ID token.
@@ -95,13 +96,14 @@ function isUserEqual(googleUser, firebaseUser) {
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+//var helpBtn = document.getElementById("helpBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
+var helpBtn = document.getElementById("helpBtn");
+
+helpBtn.onclick = function() {
     modal.style.display = "block";
 }
 

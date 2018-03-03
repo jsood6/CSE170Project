@@ -85,8 +85,8 @@ body {
     outline: none;
     cursor: pointer;
     /*padding: 14px 16px;*/
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 14px;
     padding-bottom: 14px;
     transition: 0.3s;
@@ -211,6 +211,12 @@ body {
 	background-color: pink;
 }
 
+#myBtnProducts{
+	/*position: absolute;*/
+	margin: 10px;
+	
+}
+
 .modalProducts {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -220,8 +226,8 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0,0,0); /*Fallback color */
+    background-color: rgba(0,0,0,0.4); /*Black w/ opacity */
     
 }
 
@@ -234,6 +240,7 @@ body {
     padding-right: 10px;
     padding-top: 10px;
     border: 1px solid #888;
+    background-color: white;
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
@@ -249,7 +256,7 @@ body {
     font-weight: bold;
 	background: #606061;
 	line-height: 25px;
-	position: absolute;
+	/*position: absolute;*/
 	right: 5px;
 	text-align: center;
 	top: 2px;
@@ -272,9 +279,3 @@ body {
     
 }
 
-
-.myBtnProducts{
-	position: absolute;
-	margin-left: 100px;
-	background-color: pink;
-}

@@ -1,5 +1,5 @@
 'use strict';
-
+provider.addScope('https://www.googleapis.com/auth/userinfo.profile');
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -17,16 +17,34 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-  console.log(window.googleuser);
+  //console.log(firebase.auth().currentUser);
+  displayUserProfileInfo();
+  
 	//changeUser();
 	//getBasicProfile();
 
 }
 
-function findUserID(){
+function displayUserProfileInfo(){
+  firebase.auth().onAuthStateChanged(function(user){
+  if(user){
+    console.log(user.displayName);
+    console.log(user);
+    console.log(user.photoURL);
 
-	
+    $("#productsTitle").replaceWith(""+ user.displayName);
+    document.getElementById("userFaceImage").src = user.providerData[0].photoURL;
+    //$('#productsTitle').val(user.displayName.toString());
+    //document.getElementById("productsTitle").value = user.displayName;
+  }
+  else{
+    console.log("user not signed in");
+  }
+});
+
 }
+
+
 
 function changeUser(){
   /*show_login_status('Google', )

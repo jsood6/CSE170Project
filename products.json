@@ -1,29 +1,35 @@
 {
 	"products": [
 		{
-			"imageURL":"https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit",
-			"productName": ""
+			"productName": "",
+			"productType": "",
+			"imageURL":"https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw6b32d5da/ProductImages/Palettes/Afterdark/3605971388385_afterdark.jpg?sw=1000&sh=1000&sm=fit"
+			
 
 		},
 		{
-			
-			"imageURL": "https://images-na.ssl-images-amazon.com/images/I/41uRZi7nxWL._SY450_.jpg",
-			"productName":""				
+			"productName": "",
+			"productType": "",
+			"imageURL": "https://images-na.ssl-images-amazon.com/images/I/41uRZi7nxWL._SY450_.jpg"
+							
 		},
 		{
-			
-			"imageURL": "https://www.snupps.com/api/2.9/users/1094649/items/8253741/views/7826402-1.1024.jpg",
-			"productName":""			
+			"productName": "",
+			"productType": "",
+			"imageURL": "https://www.snupps.com/api/2.9/users/1094649/items/8253741/views/7826402-1.1024.jpg"
+						
 		},
 		{
-			
-			"imageURL": "https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-			"productName": ""				
+			"productName": "",
+			"productType": "",
+			"imageURL": "https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+							
 		},
 		{
-			
-			"imageURL": "https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-			"productName": ""				
+			"productName": "",
+			"productType": "",
+			"imageURL": "https://i5.walmartimages.com/asr/690249d2-b5a9-4dd7-82a2-e5413311d387_1.1957c0d33f2db0b3cc708f3727109203.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+							
 		}
 		
 	]

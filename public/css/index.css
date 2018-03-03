@@ -10,7 +10,6 @@
 }
 
 
-
 .scrolling-wrapper {
   /*-webkit-overflow-scrolling: touch;*//
   overflow-x: scroll;
@@ -147,17 +146,17 @@
 }
 
 .line{
-width: 375px;
-top:63px;
-border-bottom: 1px solid black;
-position: absolute;
+	width: 375px;
+	top:63px;
+	border-bottom: 1px solid black;
+	position: absolute;
 }
 
 .line2{
-width: 375px;
-top:300px;
-border-bottom: 1px solid black;
-position: absolute;
+	width: 375px;
+	top:300px;
+	border-bottom: 1px solid black;
+	position: absolute;
 }
 
 

@@ -2,10 +2,13 @@ var productsData = require("../products.json");
 
 exports.addProducts = function(req, res){
 	var newProduct = {
-		"imageURL" : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOeK6MExynZT7tEYFipQaFxqPzXyjlzRyG7suMcewbzgIdLfrLjQ',
-		"productName" : " "
+		"productType" : req.query.productType,
+		"productName" : req.query.productName,
+		"imageURL" : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOeK6MExynZT7tEYFipQaFxqPzXyjlzRyG7suMcewbzgIdLfrLjQ'
+		
 	};
 
+	console.log(newProduct);
 	productsData.products.push(newProduct);
 	//productsData['products'].push(newProduct);
 	//delete productsData.products[5];

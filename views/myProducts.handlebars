@@ -27,7 +27,7 @@
 	<div class="topPageContainer">
 		<h2 id="productsTitle">My Profile</h2>
 		<div class="userFacePic">
-			<img src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="100" height="100">
+			<img  id="userFaceImage" src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="100" height="100">
 		</div>
 	</div>
 	
@@ -35,8 +35,8 @@
 	<div class="tabsContainer">
 	<!-- Tab links -->
 	<div class="tab">
-	  <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'userProducts')">Products</button>
-	  <button class="tablinks" onclick="openCity(event, 'userLooks')">Looks</button>
+	  <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'userProducts')">My Products</button>
+	  <button class="tablinks" onclick="openCity(event, 'userLooks')">My Looks</button>
 	</div>
 
 	<!-- Tab content -->
@@ -55,13 +55,20 @@
 			  	<span class="closeProducts" aria-hidden="true">&times;</span>
 			  	<h3><b>Add a product</h3>
 
-			    <div class="modal-content-products-container">
-			    	<form id="addBtnForm" role="form" method="get" action="/addProducts">	
+			    <!--<div class="modal-content-products-container">-->
+			    	<form id="addBtnForm" role="form" method="get" action="/addProducts">
+			    	<div class="form-group">
+				      <label for="productType">Product Type:</label>
+				      <input type="text" class="form-control" id="productTypeID" placeholder="eg: lipstick, eyeliner, etc" name="productType">
+				    </div>
+				    <div class="form-group">
+				      <label for="productName">Product Name:</label>
+				      <input type="text" class="form-control" id="productNameID" placeholder="product name" name="productName">
+				    </div>	
 						<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!"></input>
 					</form>
 
-
-			  </div> <!--end of modal content container-->
+			  <!--</div> end of modal content container-->
 			</div> <!--end of modal content-->
 
 
