@@ -24,6 +24,7 @@ $(document).ready(function() {
 	initializePage();
 	$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
+  console.log("document ready");
 
 	
 });

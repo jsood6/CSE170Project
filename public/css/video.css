@@ -9,8 +9,17 @@
 	color: #CC00AA;
 }
 
+body.videoPage{
+	background-color: #F5D7D5;
+
+}
+
 h1, h2, h3, h4, h5 {
-	color: #808080;
+	color: #e59d96;
+}
+
+p{
+	color: #e59d96;
 }
 
 .profilePiC img{
@@ -24,14 +33,30 @@ h1, h2, h3, h4, h5 {
 	max-width: 300px;
 	margin:30px; 
 	margin-top: 100px;
+	border-radius: 12px;
+	border-color: #e59d96;
+	border-width: 5px;
 }
 
 #navbar{
 	top:10px;
+	text-align: center;
 
+}
+
+#navbar input{
+	position: absolute;
+	left: 10px;
+	margin-right: 200px;
 }
 
 #navbar span{
 	top:10px;
+	color: #e59d96;
+	font-family: "helvetica";
+	font-size: 30px;
+
+
 }
+
 

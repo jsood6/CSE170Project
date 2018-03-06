@@ -28,10 +28,9 @@ exports.view = function(req, res){
   res.render('loginPage');
 };
 
-exports.viewAlt = function(request, response){
-	
-	response.render('loginPage');
-};
+exports.viewAlt = function(req, res){
+	res.render('loginPage');
+}
 
 /*exports.addUser = function(req,res){
 	var newFriend = {

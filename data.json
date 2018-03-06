@@ -3,53 +3,64 @@
 		{
 			"id":1,
 			"imageURL": "https://static.pexels.com/photos/458766/pexels-photo-458766.jpeg",
-			"link": "https://www.youtube.com/embed/_geV3WesbP8?rel=0"	
+			"link": "https://www.youtube.com/embed/_geV3WesbP8?rel=0",
+			"videoInfo": "<p><b>Face:</b><br>Rimmel London Match Perfection Foundation (Ivory) <br> Maybelline Superstay 24hr Concealer <br>LA Girl Pro Conceal ( Porcelain ) <br> Rimmel Stay Matte Powder ( Transparent ) <br>MakeupRevolution Ultra Sculpt and Contour Kit ( Ultra Fair C01)<br>the Balm Balm Voyage Vol. 2 palette ( blush and highlighter )<br><br><b>Brows:</b><br>Anastasia Beverly Hills Dipbrow Pomade (Medium Brown)<br><br><b>Eyes:</b> <br>the Balm Balm Voyage Vol. 2 pallete <br>Essence Essence Liquid Ink Eyeliner <br> Essence Gel Eye Pencil (Cocoa Bean) <br><br><b>Lips:</b> <br>NYX Round Lipstick ( Frappucino ) </p>"
 					
 		},
 		{
 			"id":2,
 			"imageURL": "https://static.pexels.com/photos/119959/pexels-photo-119959.jpeg",
-			"link": "https://www.youtube.com/embed/uHyLsKEDx5w"				
+			"link": "https://www.youtube.com/embed/uHyLsKEDx5w",
+			"videoInfo": "<p>DESIO EYES CONTACT LENSES Desert Dream<br><b>Face:</b><br>NYX Conceal, Contour & Correct Palette <br>Black Opal Stick Foundation Hazelnut<br>Maybelline Cafe Concealer <br>LA Girl Pro Concealer Fawn <br>LA Girl Pro Concealer Cool Tan <br>Ben Nye Banana Powder <br>MAC MSF Dark <br><br>ABH Contour Shades (Fawn)<br>MAC Sunpower MSF <br><br> <b>Lips:</b><br>Coloured Raine Raine Fever Lipstick <br><br><b>Notes:</b><br>Beauty Blender Sponge that I love! <br>Foundation Brush USED IN THIS VIDEO Morphe 439 <br>Septum Nose Ring is fake! Purchased from beauty supply store!</p>"				
 		},
 		{
 			"id":3,
 			"imageURL": "https://static.pexels.com/photos/6393/red-woman-girl-brown.jpg",
-			"link": "https://www.youtube.com/embed/Ag6h5DLmAA0" 			
+			"link": "https://www.youtube.com/embed/Ag6h5DLmAA0",
+			"videoInfo": "<p><b>Lips:</b><br>Dr Lipp Nipple Balm for Lips<br>MAC Red Lipstick<br>MAC Cherry Lip Liner<br>MAC Hip 'n' Happy<br>MAC Myth Lipstick <br><br><b>Face:</b><br>NARS Creamy Custard Concealer<br><br><b>Eyes:</b><br>Sigma Flat Definer Brush<br>Too Faced Chocolate Bar Eyeshadow</p>"			
 		},
 		{
 			"id":4,
 			"imageURL": "https://static.pexels.com/photos/247287/pexels-photo-247287.jpeg",
-			"link": "https://www.youtube.com/embed/12hkeHTi0ZI"			
+			"link": "https://www.youtube.com/embed/12hkeHTi0ZI"	,
+			"videoInfo": "video4"		
 		},
 		{
 			"id":5,
 			"imageURL": "https://static.pexels.com/photos/6169/woman-hand-girl-professional.jpg",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",
+			"videoInfo": "video5"	
 		},
 		{
 			"id":6,
 			"imageURL": "https://images.pexels.com/photos/247295/pexels-photo-247295.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",
+			"videoInfo": "video6"	
 		},
 		{
 			"id":7,
 			"imageURL": "https://images.pexels.com/photos/220423/pexels-photo-220423.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",
+			"videoInfo": "video7"
+
 		},
 		{
 			"id":8,
 			"imageURL": "https://images.pexels.com/photos/46279/brown-brown-eyes-iris-gene-46279.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",	
+			"videoInfo": "video8"
 		},
 		{
 			"id":9,
 			"imageURL": "https://images.pexels.com/photos/371117/pexels-photo-371117.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",
+			"videoInfo": "video9"	
 		},
 		{
 			"id":10,
 			"imageURL": "https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns"	
+			"link": "https://www.youtube.com/embed/qKgRoxCs-Ns",
+			"videoInfo": "video10"	
 		}	
 	]
 

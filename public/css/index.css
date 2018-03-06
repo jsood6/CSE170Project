@@ -11,7 +11,7 @@
 
 
 .scrolling-wrapper {
-  /*-webkit-overflow-scrolling: touch;*//
+  /*-webkit-overflow-scrolling: touch;*/
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -43,6 +43,7 @@
 
 .card {
     display: inline-block;
+
   }
 
 .logoutLblPos{
@@ -62,6 +63,8 @@
   max-height: 150px;
   margin-top:10px;
   margin-left: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 

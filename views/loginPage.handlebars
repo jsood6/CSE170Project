@@ -25,11 +25,38 @@
 <body class="login_page">
 
 	<div class="loginPageContainer">
+		<!--{{#if viewAlt}}
+		Min!<button class="likeBtn">Like</button>
+		{{else}}
+		<h4>Projects</h4>
+		{{/if}}-->
+
 	<div class="beauti">
 		<p>BEAUTI</p>
 	</div> 
     
-    <div class="g-signin2" id="loginBtn" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
+    <div class="loginBoxScrollingWrapper">
+		  	<!--<div class="scrollStepsLogin">-->
+		  		<div class="image">
+		  			<img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/28660965_1768552836490750_8824996580152049664_n.png?oh=39fbb992b5cc1e3354f7d2d445b90991&oe=5B0F7836">
+		  			<p><b>Makeup Collection On the Go</b></p>
+		  			<p>Digitalize your makeup collection<br> and have it on the palm of your hands<br> whenever you need it!</p>
+		  		</div>
+		  		<div class="image">
+		  			<img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/28471406_1768552839824083_7197302149330501632_n.png?oh=c8e43b5aac5818c1292c95d2451a45b3&oe=5B4BD8A7">
+		  			<p><b>Learn New Looks</b></p>
+		  			<p>Watch tutorials tailored to the<br>products you own, and improve your<br>skills as a makeup artist.</p>
+		  		</div>
+		  		<div class="image">
+		  			<img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/28468764_1768552849824082_7527462560321241088_n.png?oh=87a19627dd2e4b88d9b3e71af48870c8&oe=5B03DA96">
+		  			<p><b>Store Your Creations</b></p>
+		  			<p>Upload pictures of your makeup<br>creations, and be able to look back<br>on your progress as an artist!</p>
+		  		</div>
+			<!--</div>-->
+    </div>
+
+
+    <div class="g-signin2" id="loginBtn" style="margin-top: 180px;" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
     
 
     <button id="signOutBtn">
@@ -46,7 +73,9 @@
 
 	</div> <!-- end of login page container-->
 
-	<div class="helpTagLine">
+	<!--<img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/28468764_1768552849824082_7527462560321241088_n.png?oh=87a19627dd2e4b88d9b3e71af48870c8&oe=5B03DA96">-->
+
+	<!--<div class="helpTagLine">
  		
  		Learn new makeup looks with your existing products!
  		
@@ -62,7 +91,7 @@
 			 	<div class="step3Block">
 			 		<p>Step 3: take a selfie to record your new makeup look!</p>
 			 	</div>
-	</div>
+	</div>-->
 	<!-- Trigger/Open The Modal -->
 			
 			<!-- Trigger/Open The Modal -->
@@ -86,7 +115,7 @@
 			  </div>
 
 			</div> <!-- end of modal class-->
-
+			
 
 
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>

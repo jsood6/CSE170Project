@@ -19,12 +19,17 @@ body.login_page{
 
 	/*background:linear-gradient(318.61deg, #F5D7D5 30%, #FDD1FA 100%);*/
 	
-	background:linear-gradient(318.61deg, #4bc0c8 20%, #c779d0 60%, #feac5e 100%);
+	/*this one is good..background:linear-gradient(318.61deg, #4bc0c8 20%, #c779d0 60%, #feac5e 100%);*/
+	background-color: #F5D7D5
 	
 }
 
 body.homePage{
 	background-color: white;
+}
+
+body.videoPage{
+	background-color: #F5D7D5;
 }
 
 /*.loginPageContainer{
@@ -59,6 +64,67 @@ body.homePage{
 	top:200px;
 	border-bottom: 1px solid black;
 	position: absolute;*/
+}
+
+.loginBoxScrollingWrapper {
+  /*-webkit-overflow-scrolling: touch;*//
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position:absolute;
+  display:block;
+  top:230px;
+  left:0;
+  width:360px;
+  max-height:500px;
+  margin:0;
+  /*background:#abc;*/
+  background:transparent;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.loginBoxScrollingWrapper div {
+
+	-webkit-overflow-scrolling: touch;
+    
+    display: inline-block;
+    
+    margin: 17px;
+    max-width: 400px;
+  }
+
+
+.card {
+    display: inline-block;
+
+  }
+
+.image{
+	background-color: #e59d96;
+	border-radius: 12px;
+	width: 280px;
+	height: 210px;
+	text-align: center;
+	opacity: 0.5;
+	/*box-shadow: 10px 10px grey;*/
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 10px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.image img{
+	max-width: 80px;
+	/*margin-left: 60px;*/
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+
+}
+
+.image p{
+	color: white;
+	font-family: "helvetica"
 }
 
 .steps{
@@ -128,6 +194,7 @@ body.homePage{
 }
 
 #helpBtn{ /* the help button */
+	
 	bottom: 20px;
 	right: 20px;
 	position: absolute;
@@ -206,13 +273,13 @@ body.homePage{
 	color: black;
 	opacity: 0.6;
 	/*background:linear-gradient(318.61deg, #B29DFD 0%, #B0A4FB 100%);*/
-	top: 350px;
+	margin-top: 320px;
 	left: 125px;
 }
 
 #nextPageLoginBtn{
 	position: absolute;
-	top: 350px;
+	margin-top: 320px;
 	left: 220px;
 
 }

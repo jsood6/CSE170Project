@@ -149,11 +149,20 @@
 						  var filename = file.name;
 						}
 
+						function closeModal(){
+							modal.style.display = "none";
+						}
+
+						function alertSuccessfulFileUpload(){
+							alert("successfully uploaded image!");
+						}
+
 						</script>
 					<!--</button>-->
 			</div><!-- end of cameraPic class-->
 
-			<button id="uploadFile" onclick="uploadFile()">
+
+			<button id="uploadFile" onclick="uploadFile();closeModal();alertSuccessfulFileUpload();">
 			    	Upload selected file!
 		 		</button>
 
