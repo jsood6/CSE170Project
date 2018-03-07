@@ -156,7 +156,7 @@ body {
 /* The Close Button */
 .close {
     color: black;
-    float: right;
+    float: right; 
     font-size: 28px;
     font-weight: bold;
 	background: #606061;
@@ -213,8 +213,18 @@ body {
 
 #myBtnProducts{
 	/*position: absolute;*/
-	margin: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 120px;
+	height: 120px;
 	
+}
+
+.firstProduct{
+	float: right;
+	width: 120px;
+	height: 120px;
+	border-color: pink;
 }
 
 .modalProducts {

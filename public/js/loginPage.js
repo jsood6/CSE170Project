@@ -22,8 +22,8 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	$('#signOutBtn').hide();
-	$('#nextPageLoginBtn').hide();
+	//$('#signOutBtn').hide();
+	//$('#nextPageLoginBtn').hide();
   console.log("document ready");
 
 	
@@ -39,6 +39,8 @@ function initializePage() {
   });
 	
 }
+
+
 
 /*function onSignIn(){
 	
@@ -78,8 +80,10 @@ function onSignIn(googleUser) {
       console.log('User already signed-in Firebase.');
     }
   });
-  $('#signOutBtn').show();
-	$('#nextPageLoginBtn').show();
+  //$('#signOutBtn').show();
+	//$('#nextPageLoginBtn').show();
+
+  window.location.href = "/index";
 }
 
 function isUserEqual(googleUser, firebaseUser) {
@@ -185,8 +189,8 @@ function signOut() {
 	});
 
 	userSignedIn = false;
-	$('#signOutBtn').hide();
-	$('#nextPageLoginBtn').hide();
+	//$('#signOutBtn').hide();
+	//$('#nextPageLoginBtn').hide();
 	//$('#loginBtn').show();
 
 	    
