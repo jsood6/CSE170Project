@@ -25,16 +25,12 @@
 <body class="login_page">
 
 	<div class="loginPageContainer">
-		<!--{{#if viewAlt}}
-		Min!<button class="likeBtn">Like</button>
-		{{else}}
-		<h4>Projects</h4>
-		{{/if}}-->
 
 	<div class="beauti">
 		<p>BEAUTI</p>
 	</div> 
     
+    {{#if viewAlt}}
     <div class="loginBoxScrollingWrapper">
 		  	<!--<div class="scrollStepsLogin">-->
 		  		<div class="image">
@@ -54,6 +50,9 @@
 		  		</div>
 			<!--</div>-->
     </div>
+	{{else}}
+	
+	{{/if}}
 
 
     <div class="g-signin2" id="loginBtn" style="margin-top: 180px;" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
@@ -149,6 +148,15 @@
 	<script src="js/index.js"></script>
 		
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114654008-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114654008-2');
+	</script>
 
 
 

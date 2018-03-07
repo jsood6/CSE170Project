@@ -74,7 +74,7 @@
 
 			</div> <!--end of modal class-->
 
-			{{#each products}}
+			{{#each productsData.products}}
 			<div class="productsInProfile">
 				<img src="{{imageURL}}" class="img-responsive">
 			</div>
@@ -110,6 +110,7 @@
 						<script>
 
 						let file;
+						let isFileNull;
 						const fileInput = document.getElementById('file-input');
 						function sendPic(){
 							var file = fileInput.files[0];
@@ -132,6 +133,7 @@
 						    }
 
 						    if (file !== null) {
+						      isFileNull=false;
 						      output.src = URL.createObjectURL(file);
 						      var ref = firebase.storage().ref('/looks');
 						      var childRef = ref.child(output.src);
@@ -147,24 +149,49 @@
 						  $("#cameraFile").on("change", function(event){
 						  file = event.target.files[0]; });
 						  var filename = file.name;
+						  closeModal();
 						}
 
 						function closeModal(){
 							modal.style.display = "none";
+							alertSuccessfulFileUpload();
+
 						}
 
 						function alertSuccessfulFileUpload(){
 							alert("successfully uploaded image!");
 						}
+						function checkIfFileIsNull(){
+							if(file == null){
+								isFileNull= true;
+								alert("No image selected: please select an image to upload!");
+							}
+							else{
+								uploadFile();
+							}
+							
+						}  
 
 						</script>
 					<!--</button>-->
 			</div><!-- end of cameraPic class-->
 
 
-			<button id="uploadFile" onclick="uploadFile();closeModal();alertSuccessfulFileUpload();">
+			<button id="uploadFile" onclick="checkIfFileIsNull();">
 			    	Upload selected file!
 		 		</button>
+
+		 	<form id="addBtnFormLooks" role="form" method="get" action="/addLooks">
+			    	<div class="form-group">
+				      <label for="productType">Product Type:</label>
+				      <input type="text" class="form-control" id="productTypeID" placeholder="eg: lipstick, eyeliner, etc" name="productType">
+				    </div>
+				    <div class="form-group">
+				      <label for="productName">Product Name:</label>
+				      <input type="text" class="form-control" id="productNameID" placeholder="product name" name="productName">
+				    </div>	
+						<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!"></input>
+					</form>
 
 			  </div>
 			</div><!-- end of modal content-->
@@ -172,20 +199,12 @@
 
 			</div><!-- end of modal class-->
 
-		<!--{{#each looks}}
+		{{#each looksData.looks}}
 		<div class="looksInProfile">
 			<img src="{{imageURL}}" class="img-responsive">
 		</div>
-		{{/each}}-->
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">
-
-		<img src="http://shortyawards.com.s3.amazonaws.com/entries/8th/screen-shot-2016-01-18-at-51154-p.png" class="img-responsive">
-
-		<img src="https://www.thefamouspeople.com/profiles/images/rachel-levin-1.jpg" class="img-responsive">
-
-		<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg:large" class="img-responsive">
-
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xzX_tuMc9bgz0Np4NCRTxCqPQP73TY3FAtrThuaYi3_4XG_DlA" class="img-responsive">	
+		{{/each}}
+			
 	  
 	</div>
 
@@ -203,6 +222,15 @@
 
 	<script src="js/myProducts.js"></script>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114654008-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114654008-2');
+	</script>
 
 
 

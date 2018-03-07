@@ -19,17 +19,19 @@ exports.addFriend = function(req, res) { 
  * GET home page.
  */
 
-var data = require("../userProfiles.json");
+var data = require("../userProfiles.json")['userProfiles'];
 var firebase = require("firebase/app");
 require("firebase/auth");
 require("firebase/database");
 
 exports.view = function(req, res){
-  res.render('loginPage');
+  data["viewAlt"] = false;
+  res.render('loginPage', data);
 };
 
 exports.viewAlt = function(req, res){
-	res.render('loginPage');
+	data["viewAlt"] = true;
+	res.render('loginPage', data);
 }
 
 /*exports.addUser = function(req,res){
