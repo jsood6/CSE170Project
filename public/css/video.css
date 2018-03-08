@@ -22,21 +22,6 @@ p{
 	color: #e59d96;
 }
 
-#camera-video {
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-    -moz-transform:rotateY(180deg); /* Firefox */
-}
-
-#camera-canvas {
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-    -moz-transform:rotateY(180deg); /* Firefox */
-}
-
 
 
 .profilePiC img{

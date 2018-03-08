@@ -35,6 +35,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
   $('#helpBtn').click(function(){
+    console.log("HELP BUTTON CLICKED BEFORE SENDING INFO TO GA");
     ga("send", "event", "help", "click");
     console.log("HELP BUTTON CLICKED!!!!!!");
   });

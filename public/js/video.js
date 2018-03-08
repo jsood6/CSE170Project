@@ -3,7 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	initCamera();
+	
 	/*$('.friend a').click(function(e){
 		e.preventDefault();
 		$(this).find('h3').text(anagrammedName($(this).find('h3').text()));
