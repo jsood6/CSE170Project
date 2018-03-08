@@ -118,6 +118,9 @@ var helpBtn = document.getElementById("helpBtn");
 
 helpBtn.onclick = function() {
     myHelpModal.style.display = "block";
+    console.log("HELP BUTTON CLICKED BEFORE SENDING INFO TO GA");
+    ga("send", "event", "help", "click");
+    console.log("HELP BUTTON CLICKED!!!!!!");
 }
 
 // When the user clicks on <span> (x), close the modal
