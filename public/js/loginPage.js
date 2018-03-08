@@ -22,9 +22,6 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-  $('#loginBtn').onclick(function(){
-    window.location.href = "/index";
-  });
 	//$('#signOutBtn').hide();
 	//$('#nextPageLoginBtn').hide();
   console.log("document ready");
@@ -64,7 +61,7 @@ function onSignIn(googleUser) {
     unsubscribe();
     console.log(googleUser.getBasicProfile());
     // Check if we are already signed-in Firebase with the correct user.
-    if (!isUserEqual(googleUser, firebaseUser)) {
+    if (!isUserEqual(googleUser, firebaseUser)) { //so, if it's a new user
       // Build Firebase credential with the Google ID token.
       var credential = firebase.auth.GoogleAuthProvider.credential(
           googleUser.getAuthResponse().id_token);
@@ -77,11 +74,12 @@ function onSignIn(googleUser) {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        //window.location.href = "/index";
+        
         // ...
       });
     } else {
       console.log('User already signed-in Firebase.');
+      window.location.href = "/index";
     }
   });
   //$('#signOutBtn').show();
