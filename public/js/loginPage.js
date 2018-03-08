@@ -22,7 +22,7 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	//$('#signOutBtn').hide();
+	$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
   console.log("document ready");
 
@@ -74,17 +74,17 @@ function onSignIn(googleUser) {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        $('#nextPageLoginBtn').show();
+        //$('#nextPageLoginBtn').show();
         // ...
       });
     } else {
       console.log('User already signed-in Firebase.');
-      window.location.href = "/index";
-      $('#nextPageLoginBtn').hide();
+      //window.location.href = "/index";
+      //$('#nextPageLoginBtn').hide();
     }
   });
-  //$('#signOutBtn').show();
-	//$('#nextPageLoginBtn').show();
+  $('#signOutBtn').show();
+	$('#nextPageLoginBtn').show();
 
 }
 
@@ -191,8 +191,8 @@ function signOut() {
 	});
 
 	userSignedIn = false;
-	//$('#signOutBtn').hide();
-	//$('#nextPageLoginBtn').hide();
+	$('#signOutBtn').hide();
+	$('#nextPageLoginBtn').hide();
 	//$('#loginBtn').show();
 
 	    
