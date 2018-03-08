@@ -37,16 +37,36 @@
 		<iframe src="{{link}}" target="_parent"></iframe>
 	</div>
 
-	<!-- Use an element to toggle between a like/dislike icon -->
+	<!-- Use an element to toggle between a like/dislike icon 
 	<i onclick="myFunction(this)" style="color: purple; size: 50px;" class="fa fa-thumbs-up"></i>
 
 	<script>
 		function myFunction(x) {
 	    x.classList.toggle("fa-thumbs-down");
 		}
-	</script>
+	</script>-->
 	
-	{{{videoInfo}}}
+	<h3><b>Face:</b></h3>
+	<div class="FaceProductsScrollingWrapper">
+		  	<!--<div class="scrollStepsLogin">-->
+		  		<div class="faceProdImage">
+		  			<img src= "{{FaceProduct1Image}}">
+		  			<p>{{FaceProduct1Name}}</p>
+		  		</div>
+		  		<div class="faceProdImage">
+		  			<img src= "{{FaceProduct2Image}}">
+		  			<p>{{FaceProduct2Name}}</p>
+		  		</div>
+		  		<div class="faceProdImage">
+		  			<img src= "{{FaceProduct3Image}}">
+		  			<p>{{FaceProduct3Name}}</p>
+		  		</div>
+			<!--</div>-->
+    </div>
+
+    <!--create different scrolling wrappers for lips and eyes. Just copy this one above ^^ and change class name 
+    	for the scrolling wrapper and also the classname for each div(so, faceProdImage to LipProdImage, etc) -->
+
 
 	
 	

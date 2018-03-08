@@ -23,7 +23,7 @@ firebase.initializeApp(config);
 $(document).ready(function() {
 	initializePage();
 	//$('#signOutBtn').hide();
-	//$('#nextPageLoginBtn').hide();
+	$('#nextPageLoginBtn').hide();
   console.log("document ready");
 
 	
@@ -74,12 +74,13 @@ function onSignIn(googleUser) {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        
+        $('#nextPageLoginBtn').show();
         // ...
       });
     } else {
       console.log('User already signed-in Firebase.');
       window.location.href = "/index";
+      $('#nextPageLoginBtn').hide();
     }
   });
   //$('#signOutBtn').show();
