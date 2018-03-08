@@ -53,9 +53,11 @@ function onSignIn(){
 		var token = result.credential.accessToken;
 		var user = result.user;
 		console.log(user.displayName);
+    window.location.href="/index";
 
 	});
-	$('#signOutBtn').show();
+	//$('#signOutBtn').show();
+
 	$('#nextPageLoginBtn').show();
 }
 
