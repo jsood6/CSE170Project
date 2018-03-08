@@ -22,6 +22,12 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+  console.log(firebase.auth());
+        firebase.auth().signOut().then(function() {
+          console.log("sign out successful!!!!!");
+        }).catch(function(error) {
+          console.log("sign out unsuccessful");
+        });
 	//$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
   console.log("document ready");
