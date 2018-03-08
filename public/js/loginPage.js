@@ -34,10 +34,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-  $("#helpBtn").click(function(){
+  $('#helpBtn').click(function(){
     ga("send", "event", "help", "click");
+    console.log("HELP BUTTON CLICKED!!!!!!");
   });
-	
+
+
 }
 
 

@@ -17,6 +17,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+  $('#ADDED_BUTTON').click(function(){
+    console.log("HELP BUTTON CLICKED!!!!!!");
+  });
 }
 
 /* When the user clicks on the button, 
