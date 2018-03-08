@@ -22,12 +22,6 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-  console.log(firebase.auth());
-        firebase.auth().signOut().then(function() {
-          console.log("sign out successful!!!!!");
-        }).catch(function(error) {
-          console.log("sign out unsuccessful");
-        });
 	//$('#signOutBtn').hide();
 	$('#nextPageLoginBtn').hide();
   console.log("document ready");
@@ -109,29 +103,29 @@ function isUserEqual(googleUser, firebaseUser) {
 }
 
 // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('myHelpModal');
 
 // Get the button that opens the modal
 //var helpBtn = document.getElementById("helpBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("closeHelp")[0];
 
 var helpBtn = document.getElementById("helpBtn");
 
 helpBtn.onclick = function() {
-    modal.style.display = "block";
+    myHelpModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    myHelpModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        myHelpModal.style.display = "none";
     }
 }
 

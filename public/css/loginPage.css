@@ -221,7 +221,7 @@ body.videoPage{
 
 }
 /* The Modal (background) */
-.modal {
+.helpModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -235,7 +235,7 @@ body.videoPage{
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-help-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -244,15 +244,15 @@ body.videoPage{
 }
 
 /* The Close Button */
-.close {
+.closeHelp {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeHelp:hover,
+.closeHelp:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
