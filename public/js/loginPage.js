@@ -41,11 +41,13 @@ function initializePage() {
   });
 
 
+
+
 }
 
 
 
-/*function onSignIn(){
+function onSignIn(){
 	
 	firebase.auth().signInWithPopup(provider).then(function(result){
 		var token = result.credential.accessToken;
@@ -55,9 +57,9 @@ function initializePage() {
 	});
 	$('#signOutBtn').show();
 	$('#nextPageLoginBtn').show();
-}*/
+}
 
-function onSignIn(googleUser) {
+/*function onSignIn(googleUser) {
   console.log('Google Auth Response', googleUser);
   // We need to register an Observer on Firebase Auth to make sure auth is initialized.
   var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
@@ -89,7 +91,7 @@ function onSignIn(googleUser) {
   $('#signOutBtn').show();
 	$('#nextPageLoginBtn').show();
 
-}
+}*/
 
 function isUserEqual(googleUser, firebaseUser) {
   if (firebaseUser) {
