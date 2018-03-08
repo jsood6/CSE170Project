@@ -22,6 +22,9 @@ firebase.initializeApp(config);
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+  $('#loginBtn').onclick(function(){
+    window.location.href = "/index";
+  });
 	//$('#signOutBtn').hide();
 	//$('#nextPageLoginBtn').hide();
   console.log("document ready");
@@ -74,6 +77,7 @@ function onSignIn(googleUser) {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        //window.location.href = "/index";
         // ...
       });
     } else {
@@ -83,7 +87,6 @@ function onSignIn(googleUser) {
   //$('#signOutBtn').show();
 	//$('#nextPageLoginBtn').show();
 
-  window.location.href = "/index";
 }
 
 function isUserEqual(googleUser, firebaseUser) {
