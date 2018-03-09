@@ -13,15 +13,15 @@
 body.login_page{
 
 	height: 667px;
-	width:377px;
-	/*background:linear-gradient(318.61deg, #FFFFFF 0%, #F5D7D5 100%);*/
-	/*background:linear-gradient(318.61deg, #f4e2d8 0%, purple 100%);*/
+	width: 377px;
+	/*background:linear-gradient(318.61deg, #FFFFFF 0%, #F5D7D5 100%); 667px */
+	/*background:linear-gradient(318.61deg, #f4e2d8 0%, purple 100%); 377px*/
 
 	/*background:linear-gradient(318.61deg, #F5D7D5 30%, #FDD1FA 100%);*/
 	
 	/*this one is good..background:linear-gradient(318.61deg, #4bc0c8 20%, #c779d0 60%, #feac5e 100%);*/
-	background-image: url(../2275.jpg);
-	background-size: 375px 667px;
+	background-image: url(../faded.jpg);
+	background-size: 717px 717px;
 	background-repeat: no-repeat;
 	
 }
@@ -40,22 +40,32 @@ body.videoPage{
 	background-color: red;
 }*/
 
+.logo{
+	display: block;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+
+}
+
+
 .beauti p{
 	/*font-size: 500%; color: white; font-family: helvetica;"*/
 	/*position: absolute;*/
 	height: 85px;
 	width: 250px;	
 	color: white;	
-	font-family: "Arial";	
-	font-size: 66px;	
-	font-weight: 300;	
-	border: 1px solid white;
+	font-family: "helvetica";	
+	font-size: 43px;	
+	font-weight: 235;	
+
 
 	
 	/*line-height: 66px;*/
 	text-align: center;
 	margin-left: 65px;
-	margin-top: 130px;	
+	margin-top: 10px;	
 	
 }
 
@@ -95,7 +105,7 @@ body.videoPage{
     display: inline-block;
     
     margin: 17px;
-    max-width: 400px;
+    max-width: auto;
   }
 
 
@@ -105,12 +115,12 @@ body.videoPage{
   }
 
 .image{
-	background-color: #e59d96;
+	background-color: #FFA2C2;
 	border-radius: 12px;
 	width: 280px;
 	height: 210px;
 	text-align: center;
-	opacity: 0.5;
+	opacity: 0.75;
 	/*box-shadow: 10px 10px grey;*/
 	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 }
@@ -198,13 +208,15 @@ body.videoPage{
 #helpBtn{ /* the help button */
 	
 	bottom: 20px;
-	right: 20px;
+	right: 40px;
 	position: absolute;
-	border-radius: 12px;
+	border: none;
+	/*border-radius: 12px;*/
 	/*background-color: #ADD8E6;*/
-	background-color: #F5D7D5;
+	background-color: transparent;
 	opacity: 0.6;
 	font-weight: bold;
+	font-size: 20px;
 	color: black;
 	
 
@@ -240,7 +252,7 @@ body.videoPage{
 .modal-help-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 40px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -251,6 +263,8 @@ body.videoPage{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-top: -40px;
+    margin-right: -28px; 
 }
 
 .closeHelp:hover,
@@ -296,11 +310,13 @@ body.videoPage{
 #loginBtn{
 	position: absolute;
 	top: 300px;
-	left: 130px;
+	left: 60px;
 
 	height: 39px;	
 	width: 255px;	
-	border-radius: 12px;	
+	border-radius: 16px;	
+
+	background-color: #FFFFFF;
 
 }
 
