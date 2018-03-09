@@ -20,7 +20,9 @@ body.login_page{
 	/*background:linear-gradient(318.61deg, #F5D7D5 30%, #FDD1FA 100%);*/
 	
 	/*this one is good..background:linear-gradient(318.61deg, #4bc0c8 20%, #c779d0 60%, #feac5e 100%);*/
-	background-color: #F5D7D5
+	background-image: url(../2275.jpg);
+	background-size: 375px 667px;
+	background-repeat: no-repeat;
 	
 }
 
