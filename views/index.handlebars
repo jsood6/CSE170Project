@@ -32,40 +32,36 @@
 		
 		<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
-		  	<!--<input type="button" value="Sign Out" onclick="history.back()">-->
-		  	<!--<button style="position:absolute; left: 5px;top:25px;" onclick="signOutUser()">
-		     	<a href="/">sign out</a>
-		 	</button>
-		 	<script>
-		 	
-		 	function signOutUser(){
-		 		console.log(firebase.auth());
-		 		firebase.auth().signOut().then(function() {
-			  	console.log("sign out successful!!!!!");
-				}).catch(function(error) {
-				  console.log("sign out unsuccessful");
-				});
-				window.location.href = "/"
-
-		 	}
-		 	
-			 </script>-->
-
-		  <!--log out button-->
-		  <!--<form align="left" name="form1" method="post" action="log_out.php">
-  		  <label class="logoutLblPos">
-  		  <input name="submit2" type="submit" id="submit2" value="Sign Out">
-  		  </label>
-		  </form>-->
 
 		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
 		    	<span class="glyphicon glyphicon-user grey"></span>
 		    </button>
 		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: black; font-family: helvetica;">
 		    BEAUTI</div>
-		    <button class="btn btn-outline-success" id="searchBtn" type="button">
+		    <!--<button class="btn btn-outline-success" id="searchBtn" type="button">
 		    	<span class="glyphicon glyphicon-search grey"></span>
-		    </button>
+		    </button>-->
+		    <button id="userlogOutBtn" class="btn btn-outline-success" type="button" style=" top: 25px; background-color: transparent; position:absolute; right: 5px; float: right;" onclick="signOutUser(); window.location.href='/'">
+
+				<!--<a href="/">sign out</a>-->
+				<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+			</button>
+					 	
+			<script>
+					 	
+				function signOutUser(){
+					 console.log(firebase.auth());
+					 firebase.auth().signOut().then(function() {
+					console.log("sign out successful!!!!!");
+					}).catch(function(error) {
+						console.log("sign out unsuccessful");
+						});
+					window.location.href = "/"
+
+					}
+					 	
+			</script>
+
 		    <div class="line"></div>
 		  </form>
 
@@ -84,13 +80,13 @@
 
 		</div><!-- end of home container-->
 
-		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">
+		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact; margin-top: 30px; margin-bottom: 10px;">
 		RECOMMENDED FOR YOU
 		</div>
-		<div class="scrolling-wrapper">
+		<div class="scrolling-wrapper" style="margin-top: 20px;">
 		  	<div class="topRatedVideos">
 		  		<iframe style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(255, 182, 193, 0.8); margin-right: 10px;" src="https://www.youtube.com/embed/aCubTWCCl5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<!--255-182-193-->
+
 		  		<iframe style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(255, 182, 193, 0.8); margin-right: 10px;" src="https://www.youtube.com/embed/oKQbHNR6YtQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 		  		<iframe style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(255, 182, 193, 0.8); margin-right: 10px;" src="https://www.youtube.com/embed/ZmJch5mlQSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -100,50 +96,18 @@
 		  		<iframe style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(255, 182, 193, 0.8); margin-right: 10px;" src="https://www.youtube.com/embed/_qdNub2-Q1w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 
-		  <!--<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
-
-		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
-
-		  <img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">-->
-
 		</div>
-		<div class="line2"></div>
+		<!--<div class="line2" style="margin-top: 20px;"></div>-->
 
-		<!-- SEARCHBAR -->
-		<!--<div class="searchBar" align="right">
-			<form class="searchForm" action="action_page.php">
-			  <input id="searchText" type="text" placeholder="Search.." name="search">
-			  <button id="searchBtn" type="submit" id="submitBtn">
-			  	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-			  </button>
-			</form>
-		</div>-->
-
-		
-
-		<!--<div class="firstRowContainer">
-			<div class="firstRowPic1">
-				<a href="https://www.youtube.com">
-					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
-				</a>
-			</div>
-			<div class="firstRowPic2">
-				<a href="https://www.youtube.com">
-					<img src="https://static.pexels.com/photos/457701/pexels-photo-457701.jpeg" class="img-responsive">
-				</a>
-			</div>
-
-		</div>-->
-
-
-		<!--<div class="videoContainer">
-		{{#each videos}}
-		<div class="videos">
-			<a href="/video">
-				<img src="{{imageURL}}" class="img-responsive">
-			</a>		
-		</div>
-		{{/each}} -->
+		<div class="searchbarthing"><input type="text" id="searchthing" placeholder="Search.."></div>
+		<button class="btn btn-outline-success" id="searchBtn" type="button" onclick="searchBtnClicked()">
+		    	<span class="glyphicon glyphicon-search grey"></span>
+		</button>
+		<script>
+			function searchBtnClicked(){
+				window.location.href = "/myProducts";
+			}
+		</script>
 
 		<div class="videoContainer">
 			<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">

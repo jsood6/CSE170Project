@@ -19,32 +19,10 @@
 </head>
 <body>
 
-	<nav class="navbar" >
-		  <form class="form-inline">
-				<button id="backBtn" style="float: left; "><a href="/index">Back</a></button>
-				<button style=" position:absolute; right: 5px; float: right;" onclick="signOutUser()">
-					     	<a href="/">sign out</a>
-					 	</button>
-					 	<script>
-					 	
-					 	function signOutUser(){
-					 		console.log(firebase.auth());
-					 		firebase.auth().signOut().then(function() {
-						  	console.log("sign out successful!!!!!");
-							}).catch(function(error) {
-							  console.log("sign out unsuccessful");
-							});
-							window.location.href = "/"
+	<button onClick="location.href='/index'" id="backBtn" class="btn btn-outline-success" style="background-color: transparent;" type="button">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+		    </button>
 
-					 	}
-					 	
-						 </script>
-
-			  </form>
-	</nav>
-	<!--<form>
-	  <input type="button" value="<" onclick="history.back()">
-	</form>-->
 	
 	<div class="topPageContainer">
 		<div class="userFacePic">

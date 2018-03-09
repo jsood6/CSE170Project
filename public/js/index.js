@@ -17,6 +17,13 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+  /*$("#searchbar").hide();
+  $("#searchBtn").click(function(){
+     $("#searchbar").show();
+    $("#searchbar").css("width","50%");
+    console.log("????????????//");
+
+  });*/
   
 }
 
@@ -27,20 +34,9 @@ function myFunction() {
     
 }
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+// Close the dropdown menu if the user clicks outside of it
+
 
 /*function signOut() {
   //var auth2 = gapi.auth2.getAuthInstance();

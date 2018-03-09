@@ -54,7 +54,7 @@
 }
 
 .videoContainer {
-  margin-top: 180px;
+  margin-top: 10px;
   width: 375px;
 
 }
@@ -110,6 +110,21 @@
 
 }
 
+input[type=text] {
+	color: pink;
+    width: 90%;
+    height: 30px;
+    background-color: #A9A9A9;
+    font-size: 20px;
+
+}
+
+.searchbarthing{
+	margin-top:200px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+
+}
 
 
 /*#navbar #userProfileBtn{
@@ -132,12 +147,18 @@
 	padding: 2px 5px;
 }
 
-#navbar #searchBtn{
+/*#navbar #searchBtn{
 	position: absolute;
 	top:25px;
 	right:20px;
 	padding: 2px 5px;
 	
+}*/
+
+#searchBtn{
+	position: absolute;
+	top:-30px;
+	right: 5px;
 }
 
 .navbar-text{
