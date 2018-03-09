@@ -34,30 +34,32 @@
 		  <form class="form-inline">
 
 		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
-		    	<span class="glyphicon glyphicon-user" style="color: white"></span>
+		    	<span class="glyphicon glyphicon-user" style="color: black"></span>
 		    </button>
-		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: white; font-family: helvetica;">
+		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: black; font-family: helvetica;">
 		    BEAUTI</div>
 
-		    <button style="position:absolute; right: 5px;top:25px;" onclick="signOutUser()">
-		     	<!--<a href="/"></a>-->
-		     	<span class="glyphicon glyphicon-log-out"></span>
-		 	</button>
-		 	
-		 	<script>
-		 	
-		 	function signOutUser(){
-		 		console.log(firebase.auth());
-		 		firebase.auth().signOut().then(function() {
-			  	console.log("sign out successful!!!!!");
-				}).catch(function(error) {
-				  console.log("sign out unsuccessful");
-				});
-				window.location.href = "/";
+		    <button id="userlogOutBtn" class="btn btn-outline-success" type="button" style=" top: 25px; background-color: transparent; position:absolute; right: 5px; float: right;" onclick="signOutUser(); window.location.href='/'">
 
-		 	}
-		 	
-			 </script>
+				<!--<a href="/">sign out</a>-->
+				<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+			</button>
+					 	
+			<script>
+					 	
+				function signOutUser(){
+					 console.log(firebase.auth());
+					 firebase.auth().signOut().then(function() {
+					console.log("sign out successful!!!!!");
+					}).catch(function(error) {
+						console.log("sign out unsuccessful");
+					});
+					window.location.href = "/"
+
+					}
+					 	
+			</script>
+
 
 		    <div class="line"></div>
 		  </form>
@@ -76,9 +78,13 @@
 			</div>-->
 
 		</div><!-- end of home container-->
-
+		
+		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica; margin-top: 30px; margin-bottom: 10px;">
+				RECOMMENDED FOR YOU
+		 		</div>
 		</div>
-		<div class="scrolling-wrapper" style="margin-top: 20px;">
+
+		<div class="scrolling-wrapper" style="margin-top: 60px;">
 		  	<div class="topRatedVideos">
 		  		<iframe style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(255, 182, 193, 0.8); margin-right: 10px;" src="https://www.youtube.com/embed/aCubTWCCl5U" frameborder="0" encrypted-media" allowfullscreen></iframe>
 
@@ -175,14 +181,14 @@
 	<script src="js/index.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114654008-2"></script>
+	<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114654008-2"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-114654008-2');
-	</script>
+	</script>-->
 
 
 </body>
