@@ -34,33 +34,10 @@
 		  <form class="form-inline">
 
 		    <button onClick="location.href='/myProducts'" id="userProfileBtn" class="btn btn-outline-success" type="button">
-		    	<span class="glyphicon glyphicon-user grey"></span>
+		    	<span class="glyphicon glyphicon-user" style="color: white"></span>
 		    </button>
-		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: black; font-family: helvetica;">
+		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: white; font-family: helvetica;">
 		    BEAUTI</div>
-		    <!--<button class="btn btn-outline-success" id="searchBtn" type="button">
-		    	<span class="glyphicon glyphicon-search grey"></span>
-		    </button>-->
-		    <button id="userlogOutBtn" class="btn btn-outline-success" type="button" style=" top: 25px; background-color: transparent; position:absolute; right: 5px; float: right;" onclick="signOutUser(); window.location.href='/'">
-
-				<!--<a href="/">sign out</a>-->
-				<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-			</button>
-					 	
-			<script>
-					 	
-				function signOutUser(){
-					 console.log(firebase.auth());
-					 firebase.auth().signOut().then(function() {
-					console.log("sign out successful!!!!!");
-					}).catch(function(error) {
-						console.log("sign out unsuccessful");
-						});
-					window.location.href = "/"
-
-					}
-					 	
-			</script>
 
 		    <div class="line"></div>
 		  </form>
@@ -80,9 +57,6 @@
 
 		</div><!-- end of home container-->
 
-
-		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica; margin-top: 30px; margin-bottom: 10px;">
-		RECOMMENDED FOR YOU
 		</div>
 		<div class="scrolling-wrapper" style="margin-top: 20px;">
 		  	<div class="topRatedVideos">
@@ -106,13 +80,13 @@
 		</button>
 		<script>
 			function searchBtnClicked(){
-				window.location.href = "/myProducts";
+				window.location.href = "/searchPicFile";
 			}
 		</script>
 
 		<div class="videoContainer">
-			<!-- <div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica;">
-			CHOOSE YOUR LOOK -->
+			<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica;">
+			CHOOSE YOUR LOOK
 			</div>
 		{{#each videos}}
 			<div class="videos" id="{{id}}">

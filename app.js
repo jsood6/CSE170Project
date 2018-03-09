@@ -15,6 +15,7 @@ var index = require('./routes/index');
 var myProducts = require('./routes/myProducts');
 var video = require('./routes/video'); 
 var addProducts = require('./routes/addProducts');
+var searchPicFile = require('./routes/searchPicFile');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +47,7 @@ app.get('/index', index.view);
 app.get('/myProducts', myProducts.view);
 app.get('/video/:id', video.view);
 app.get('/addProducts', addProducts.addProducts);
+app.get('/searchPicFile', searchPicFile.view);
 // Example route
 // app.get('/users', user.list);
 

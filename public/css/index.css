@@ -9,6 +9,10 @@
 	color: #CC00AA;
 }
 
+body.homePage{
+	
+	background-color: #FEDFE3; 	
+}
 
 .scrolling-wrapper {
   /*-webkit-overflow-scrolling: touch;*/
@@ -95,10 +99,10 @@
 	
 }*/
 
-.grey{
+/*.grey{
 	color:grey;
 
-}
+}*/
 
 #navbar input{
 	background-color: white;
@@ -145,6 +149,7 @@ input[type=text] {
 	/*border: 1px solid #b3b3b3;
 	border-radius: 70%;*/
 	padding: 2px 5px;
+
 }
 
 /*#navbar #searchBtn{
