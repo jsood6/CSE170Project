@@ -21,10 +21,14 @@ body {
 	margin: 10px;
 }
 
-/*
+
 #productsTitle {
+	margin-top: 10px;
+	margin-bottom: 20px;
 
 }
+
+/*
 .productsContainer {
 	display: block;
 	width: 100%;
@@ -156,7 +160,7 @@ body {
 /* The Close Button */
 .close {
     color: black;
-    float: right;
+    float: right; 
     font-size: 28px;
     font-weight: bold;
 	background: #606061;
@@ -184,6 +188,21 @@ body {
     
 }
 
+.navbar input{
+	background-color: white;
+}
+
+.navbar button{
+	position: absolute;
+	background-color: white
+
+}
+
+.navbar{
+	/*background-color: black;*/
+	
+}
+
 /*.modal-content-container{
 	top:-100px;
 	background-color: red;
@@ -205,16 +224,37 @@ body {
 	max-width: 100px;
 }
 
-.myBtn{
+#myBtn{
 	position: absolute;
-	margin-left: 100px;
-	background-color: pink;
+	/*margin-left: 100px;
+	background-color: pink;*/
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 120px;
+	height: 120px;
 }
 
 #myBtnProducts{
 	/*position: absolute;*/
-	margin: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 120px;
+	height: 120px;
 	
+}
+
+.firstProduct{
+	float: right;
+	width: 120px;
+	height: 120px;
+	border-color: pink;
+}
+
+.firstLook{
+	float: right;
+	width: 120px;
+	height: 120px;
+	border-color: pink;
 }
 
 .modalProducts {

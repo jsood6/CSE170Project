@@ -34,32 +34,41 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-  $("#helpBtn").click(function(){
+  $('#helpBtn').click(function(){
+    console.log("HELP BUTTON CLICKED BEFORE SENDING INFO TO GA");
     ga("send", "event", "help", "click");
+    console.log("HELP BUTTON CLICKED!!!!!!");
   });
-	
+
+
+
+
 }
 
-/*function onSignIn(){
+
+
+function onSignIn(){
 	
 	firebase.auth().signInWithPopup(provider).then(function(result){
 		var token = result.credential.accessToken;
 		var user = result.user;
 		console.log(user.displayName);
+    window.location.href="/index";
 
 	});
-	$('#signOutBtn').show();
-	$('#nextPageLoginBtn').show();
-}*/
+	//$('#signOutBtn').show();
 
-function onSignIn(googleUser) {
+	//$('#nextPageLoginBtn').show();
+}
+
+/*function onSignIn(googleUser) {
   console.log('Google Auth Response', googleUser);
   // We need to register an Observer on Firebase Auth to make sure auth is initialized.
   var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
     unsubscribe();
     console.log(googleUser.getBasicProfile());
     // Check if we are already signed-in Firebase with the correct user.
-    if (!isUserEqual(googleUser, firebaseUser)) {
+    if (!isUserEqual(googleUser, firebaseUser)) { //so, if it's a new user
       // Build Firebase credential with the Google ID token.
       var credential = firebase.auth.GoogleAuthProvider.credential(
           googleUser.getAuthResponse().id_token);
@@ -72,15 +81,19 @@ function onSignIn(googleUser) {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        //$('#nextPageLoginBtn').show();
         // ...
       });
     } else {
       console.log('User already signed-in Firebase.');
+      //window.location.href = "/index";
+      //$('#nextPageLoginBtn').hide();
     }
   });
   $('#signOutBtn').show();
 	$('#nextPageLoginBtn').show();
-}
+
+}*/
 
 function isUserEqual(googleUser, firebaseUser) {
   if (firebaseUser) {
@@ -97,29 +110,32 @@ function isUserEqual(googleUser, firebaseUser) {
 }
 
 // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('myHelpModal');
 
 // Get the button that opens the modal
 //var helpBtn = document.getElementById("helpBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("closeHelp")[0];
 
-var helpBtn = document.getElementById("helpBtn");
+var helpBtn = document.getElementById('helpBtn');
 
 helpBtn.onclick = function() {
-    modal.style.display = "block";
+    myHelpModal.style.display = "block";
+    console.log("HELP BUTTON CLICKED BEFORE SENDING INFO TO GA");
+    ga("send", "event", "help", "click");
+    console.log("HELP BUTTON CLICKED!!!!!!");
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    myHelpModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        myHelpModal.style.display = "none";
     }
 }
 

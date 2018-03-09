@@ -1,4 +1,5 @@
 var productsData = require("../products.json");
+var looksData = require("../looks.json");
 
 exports.addProducts = function(req, res){
 	var newProduct = {
@@ -18,6 +19,7 @@ exports.addProducts = function(req, res){
 	/*delete productsData.products[9];
 	delete productsData.products[10];*/
 	
-	res.render('myProducts', productsData);
+	res.render('myProducts', {productsData,looksData} );
 
 };
+ 

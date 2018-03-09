@@ -19,16 +19,38 @@
 </head>
 <body>
 
-	<button id="backBtn"><a href="/index"><</a></button>
+	<nav class="navbar" >
+		  <form class="form-inline">
+				<button id="backBtn" style="float: left; "><a href="/index">Back</a></button>
+				<button style=" position:absolute; right: 5px; float: right;" onclick="signOutUser()">
+					     	<a href="/">sign out</a>
+					 	</button>
+					 	<script>
+					 	
+					 	function signOutUser(){
+					 		console.log(firebase.auth());
+					 		firebase.auth().signOut().then(function() {
+						  	console.log("sign out successful!!!!!");
+							}).catch(function(error) {
+							  console.log("sign out unsuccessful");
+							});
+							window.location.href = "/"
+
+					 	}
+					 	
+						 </script>
+
+			  </form>
+	</nav>
 	<!--<form>
 	  <input type="button" value="<" onclick="history.back()">
 	</form>-->
 	
 	<div class="topPageContainer">
-		<h2 id="productsTitle">My Profile</h2>
 		<div class="userFacePic">
 			<img  id="userFaceImage" src="http://garad.org/uploads/profileImage/noimage.jpg" alt="Lorem Pixel image" id="userFace" class="img-circle" width="100" height="100">
 		</div>
+		<h2 id="productsTitle">My Profile</h2>
 	</div>
 	
 	
@@ -45,7 +67,8 @@
 
 		 	<!-- Trigger/Open The Modal -->
 			
-			<button id="myBtnProducts">Add a Product</button>
+			<button id="myBtnProducts" style="font-size: 50px;">+</button> <!-- add a product button -->
+			<img src="https://www.shemazing.net/wp-content/uploads/2015/09/unnamed_10_2_2.jpg" class="firstProduct">
 
 			<!-- The Modal -->
 			<div id="myModalProducts" class="modalProducts">
@@ -88,7 +111,8 @@
 	<div id="userLooks" class="tabcontent">
 
 		<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Add Look</button>
+			<button id="myBtn" style="font-size: 50px;">+</button> <!-- add looks button -->
+			<img src="https://www.shemazing.net/wp-content/uploads/2015/09/unnamed_10_2_2.jpg" class="firstLook">
 
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
@@ -180,18 +204,6 @@
 			<button id="uploadFile" onclick="checkIfFileIsNull();">
 			    	Upload selected file!
 		 		</button>
-
-		 	<form id="addBtnFormLooks" role="form" method="get" action="/addLooks">
-			    	<div class="form-group">
-				      <label for="productType">Product Type:</label>
-				      <input type="text" class="form-control" id="productTypeID" placeholder="eg: lipstick, eyeliner, etc" name="productType">
-				    </div>
-				    <div class="form-group">
-				      <label for="productName">Product Name:</label>
-				      <input type="text" class="form-control" id="productNameID" placeholder="product name" name="productName">
-				    </div>	
-						<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!"></input>
-					</form>
 
 			  </div>
 			</div><!-- end of modal content-->
