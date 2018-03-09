@@ -16,10 +16,13 @@ body.videoPage{
 
 h1, h2, h3, h4, h5 {
 	color: #e59d96;
+
 }
 
 p{
 	color: #e59d96;
+	text-align: center;
+	margin-top:3px;
 }
 
 
@@ -36,7 +39,7 @@ p{
 	width: 350px;
 	height: 200px;
 	
-	margin-top: 50px;
+	margin-top: 15px;
 	border-radius: 12px;
 	border-color: #e59d96;
 	border-width: 5px;
@@ -54,12 +57,11 @@ p{
 	margin-right: 200px;
 }
 
-#navbar span{
-	top:10px;
+.navbar-text{
+	top:7px;
 	color: #e59d96;
 	font-family: "helvetica";
-	font-size: 30px;
-
+	font-size: 20px;
 
 }
 
@@ -70,10 +72,10 @@ p{
   white-space: nowrap;
   position:absolute;
   display:block;
-  top:340px;
+  top:280px;
   left:0;
   width:360px;
-  max-height:500px;
+  height:130px;
   margin:0;
   /*background:#abc;*/
   background:transparent;
@@ -89,7 +91,67 @@ p{
     
     display: inline-block;
     
-    margin: 17px;
+    margin: 13px;
+    max-width: 400px;
+  }
+
+  .EyesProductsScrollingWrapper {
+  /*-webkit-overflow-scrolling: touch;*/
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position:absolute;
+  display:block;
+  top:415px;
+  left:0;
+  width:360px;
+  height:130px;
+  margin:0;
+  /*background:#abc;*/
+  background:transparent;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.EyesProductsScrollingWrapper div {
+
+	-webkit-overflow-scrolling: touch;
+    
+    display: inline-block;
+    
+    margin: 13px;
+    max-width: 400px;
+  }
+
+  .LipProductsScrollingWrapper {
+  /*-webkit-overflow-scrolling: touch;*/
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position:absolute;
+  display:block;
+  top:550px;
+  left:0;
+  width:360px;
+  height:130px;
+  margin:0;
+  /*background:#abc;*/
+  background:transparent;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.LipProductsScrollingWrapper div {
+
+	-webkit-overflow-scrolling: touch;
+    
+    display: inline-block;
+    
+    margin: 13px;
     max-width: 400px;
   }
 
@@ -108,11 +170,28 @@ p{
 }*/
 
 .faceProdImage img{
-	width: 100px;
-	height: 100px;
+	width: 110px;
+	height: 75px;
 
 
 }
+
+.eyesProdImage img{
+	width: 110px;
+	height: 75px;
+
+
+}
+
+.lipProdImage img{
+	width: 110px;
+	height: 75px;
+
+
+}
+
+
+
 
 
 
