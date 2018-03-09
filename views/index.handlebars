@@ -39,6 +39,26 @@
 		    <div class="navbar-text" h1 style="font-size: 260%; text-align: center; color: white; font-family: helvetica;">
 		    BEAUTI</div>
 
+		    <button style="position:absolute; right: 5px;top:25px;" onclick="signOutUser()">
+		     	<!--<a href="/"></a>-->
+		     	<span class="glyphicon glyphicon-log-out"></span>
+		 	</button>
+		 	
+		 	<script>
+		 	
+		 	function signOutUser(){
+		 		console.log(firebase.auth());
+		 		firebase.auth().signOut().then(function() {
+			  	console.log("sign out successful!!!!!");
+				}).catch(function(error) {
+				  console.log("sign out unsuccessful");
+				});
+				window.location.href = "/";
+
+		 	}
+		 	
+			 </script>
+
 		    <div class="line"></div>
 		  </form>
 
