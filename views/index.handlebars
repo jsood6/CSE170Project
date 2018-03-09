@@ -33,7 +33,7 @@
 		<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
 		  	<!--<input type="button" value="Sign Out" onclick="history.back()">-->
-		  	<button style="top: 0px;" onclick="signOutUser()">
+		  	<!--<button style="position:absolute; left: 5px;top:25px;" onclick="signOutUser()">
 		     	<a href="/">sign out</a>
 		 	</button>
 		 	<script>
@@ -45,10 +45,11 @@
 				}).catch(function(error) {
 				  console.log("sign out unsuccessful");
 				});
+				window.location.href = "/"
 
 		 	}
 		 	
-			 </script>
+			 </script>-->
 
 		  <!--log out button-->
 		  <!--<form align="left" name="form1" method="post" action="log_out.php">
@@ -83,8 +84,8 @@
 
 		</div><!-- end of home container-->
 
-		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">
-		RECOMMENDED FOR YOU
+		<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica;">
+		Recommended
 		</div>
 		<div class="scrolling-wrapper">
 		  	<div class="topRatedVideos">
@@ -145,8 +146,8 @@
 		{{/each}} -->
 
 		<div class="videoContainer">
-			<div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: impact;">
-			CHOOSE YOUR LOOK
+			<!-- <div class="popularVideosText" style="font-size: 200%; text-align: center; color: pink; font-family: helvetica;">
+			CHOOSE YOUR LOOK -->
 			</div>
 		{{#each videos}}
 			<div class="videos" id="{{id}}">

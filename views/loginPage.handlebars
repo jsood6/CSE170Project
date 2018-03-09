@@ -19,8 +19,7 @@
 
 	<title>Test Page</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,
-	initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" media="screen and (max-width: 360px)" >
 	<meta name="google-signin-scope" content="profile email">
     <!--<meta name="google-signin-client_id" content="699556467015-1ek431j2vanuc3ojrvjr5c78a8gqj212.apps.googleusercontent.com">-->
@@ -40,6 +39,8 @@
 <body class="login_page">
 
 	<div class="loginPageContainer">
+
+	
 
 	<div class="beauti">
 		<p>BEAUTI</p>
@@ -70,12 +71,13 @@
 	{{/if}}
 
 
-    <div class="g-signin2" id="loginBtn" style="margin-top: 180px;" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>
+    <!--<div class="g-signin2" id="loginBtn" style="margin-top: 180px;" act="/add" data-onsuccess="onSignIn" data-theme="light"></div>-->
+    <button id="loginBtn" style="margin-top: 180px;" act="/add" onclick="onSignIn()">Signin with Google</button>
     
 
-    <!--<button id="signOutBtn">
+    <button id="signOutBtn">
      	<a href="" style="color:black; font-weight:bold;" onclick="signOut();">Sign out</a>
- 	</button>-->
+ 	</button>
  	
 
 	 <!--button to go to next page(main home page) from the login page-->
@@ -112,11 +114,11 @@
 			<button id="helpBtn">?</button>
 
 			<!-- The Modal -->
-			<div id="myModal" class="modal">
+			<div id="myHelpModal" class="helpModal">
 
 			  <!-- Modal content -->
-			  <div class="modal-content">
-			    <span class="close">&times;</span>
+			  <div class="modal-help-content">
+			    <span class="closeHelp">&times;</span>
 			    <b>Step 1:</b> go add some products on your profile page to get started! (or take a look at some popular makeup tutorials and get inspired!) <br><br>
 			    
 			    <b>Step 2:</b> on the next page, watch some reccommended makeup tutorials or pick a look and watch the corresponding tutorial. <br> <br>

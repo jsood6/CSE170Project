@@ -20,7 +20,9 @@ body.login_page{
 	/*background:linear-gradient(318.61deg, #F5D7D5 30%, #FDD1FA 100%);*/
 	
 	/*this one is good..background:linear-gradient(318.61deg, #4bc0c8 20%, #c779d0 60%, #feac5e 100%);*/
-	background-color: #F5D7D5
+	background-image: url(../2275.jpg);
+	background-size: 375px 667px;
+	background-repeat: no-repeat;
 	
 }
 
@@ -221,7 +223,7 @@ body.videoPage{
 
 }
 /* The Modal (background) */
-.modal {
+.helpModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -235,7 +237,7 @@ body.videoPage{
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-help-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -244,15 +246,15 @@ body.videoPage{
 }
 
 /* The Close Button */
-.close {
+.closeHelp {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeHelp:hover,
+.closeHelp:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
