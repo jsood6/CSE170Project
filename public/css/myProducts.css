@@ -9,6 +9,7 @@
 	color: #CC00AA;
 }
 
+
 h1, h2, h4, h5 {
 	color: #808080;	
 }
@@ -64,9 +65,19 @@ body {
 	text-align: center;
 }
 
+
+.productsContainer{
+	width: 375px;
+	margin-top: 150px;
+
+}
+
 .productsContainer img{
-	max-width: 200px;
-	margin-left: 50px;
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-left: 5px;
+	margin-right: 10px;
 	margin-top: 20px;
 	border: 2px solid pink;
 
@@ -78,6 +89,7 @@ body {
     border: 1px solid #ccc;
     background-color: inherit;
     max-width: 360px;
+
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -100,10 +112,17 @@ body {
 
 }
 
+.looksContainer{
+	width: 375px;
+	margin-top: 150px;
+}
 
-#userLooks img{
-	max-width: 100px;
-	margin-left:100px;
+.looksContainer img{
+	float: left;
+	width: 150px;
+	height:150px;
+	margin-left:5px;
+	margin-right: 10px;
 	margin-top: 20px;
 	border:2px solid pink;
 
@@ -226,35 +245,39 @@ body {
 
 #myBtn{
 	position: absolute;
-	/*margin-left: 100px;
-	background-color: pink;*/
-	margin-top: 10px;
-	margin-left: 10px;
-	width: 120px;
-	height: 120px;
+	top: 273px;
+	left: 28px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid pink;
 }
 
 #myBtnProducts{
-	/*position: absolute;*/
-	margin-top: 10px;
-	margin-left: 10px;
-	width: 120px;
-	height: 120px;
+	position: absolute;
+	top: 273px;
+	left: 28px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid pink;
 	
 }
 
 .firstProduct{
-	float: right;
-	width: 120px;
-	height: 120px;
-	border-color: pink;
+	position: absolute;
+	top: 273px;
+	left: 193px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid pink;
 }
 
 .firstLook{
-	float: right;
-	width: 120px;
-	height: 120px;
-	border-color: pink;
+	position: absolute;
+	top: 273px;
+	left: 193px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid pink;
 }
 
 .modalProducts {
