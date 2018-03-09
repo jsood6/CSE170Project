@@ -9,6 +9,11 @@
 	color: #CC00AA;
 }
 
+body.myProducts{
+	background-color: #FEDFE3; 	
+
+}
+
 h1, h2, h4, h5 {
 	color: #808080;	
 }
