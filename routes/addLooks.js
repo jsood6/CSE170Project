@@ -1,4 +1,5 @@
 var looksDataAdd = require("../looks.json");
+var productsData = require("../products.json");
 
 exports.addLooks = function(req, res){
 	var newLook = {
@@ -16,6 +17,6 @@ exports.addLooks = function(req, res){
 	/*delete productsData.products[9];
 	delete productsData.products[10];*/
 	
-	res.render('myProducts', looksDataAdd);
+	res.render('myProducts', {productsData,looksDataAdd});
 
 };

@@ -22,3 +22,4 @@ exports.addProducts = function(req, res){
 	res.render('myProducts', {productsData,looksData} );
 
 };
+ 

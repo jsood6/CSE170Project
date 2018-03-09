@@ -58,7 +58,7 @@ function onSignIn(){
 	});
 	//$('#signOutBtn').show();
 
-	$('#nextPageLoginBtn').show();
+	//$('#nextPageLoginBtn').show();
 }
 
 /*function onSignIn(googleUser) {
@@ -118,7 +118,7 @@ var modal = document.getElementById('myHelpModal');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closeHelp")[0];
 
-var helpBtn = document.getElementById("helpBtn");
+var helpBtn = document.getElementById('helpBtn');
 
 helpBtn.onclick = function() {
     myHelpModal.style.display = "block";
