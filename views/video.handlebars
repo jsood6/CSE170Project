@@ -27,11 +27,10 @@
 	<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
 	  		<input type="button" value="<" onclick="history.back()">
-	  		<span class="navbar-text">VIDEO</span>
+	  		<div class="navbar-text">{{LookName}}</div>
 	  	</form>
 	</nav>
 
-	
 	
 	<div class="videoSize">
 		<iframe src="{{link}}" target="_parent"></iframe>
@@ -46,8 +45,10 @@
 		}
 	</script>-->
 	
-	<h3><b>Face:</b></h3>
+	<div class="navbar-text" h1 style="font-size: 120%; position: absolute; top: 265px; left: 13px; color: #e59d96; font-family: helvetica;">
+		    FACE:</div>
 	<div class="FaceProductsScrollingWrapper">
+		
 		  	<!--<div class="scrollStepsLogin">-->
 		  		<div class="faceProdImage">
 		  			<img src= "{{FaceProduct1Image}}">
@@ -64,12 +65,44 @@
 			<!--</div>-->
     </div>
 
-    <!--create different scrolling wrappers for lips and eyes. Just copy this one above ^^ and change class name 
-    	for the scrolling wrapper and also the classname for each div(so, faceProdImage to LipProdImage, etc) -->
+	<div class="navbar-text" h1 style="font-size: 120%; position: absolute; top: 400px; left: 13px; color: #e59d96; font-family: helvetica;">
+		    EYES:</div>
+	<div class="EyesProductsScrollingWrapper">
+		
+		  	<!--<div class="scrollStepsLogin">-->
+		  		<div class="eyesProdImage">
+		  			<img src= "{{EyesProduct1Image}}">
+		  			<p>{{EyesProduct1Name}}</p>
+		  		</div>
+		  		<div class="eyesProdImage">
+		  			<img src= "{{EyesProduct2Image}}">
+		  			<p>{{EyesProduct2Name}}</p>
+		  		</div>
+		  		<div class="eyesProdImage">
+		  			<img src= "{{EyesProduct3Image}}">
+		  			<p>{{EyesProduct3Name}}</p>
+		  		</div>
+			<!--</div>-->
+    </div>
 
-
-	
-	
+    <div class="navbar-text" h1 style="font-size: 120%; position: absolute; top: 535px; left: 13px; color: #e59d96; font-family: helvetica;">
+		    LIP:</div>
+	<div class="LipProductsScrollingWrapper">
+				  	<!--<div class="scrollStepsLogin">-->
+		  		<div class="lipProdImage">
+		  			<img src= "{{LipProduct1Image}}">
+		  			<p>{{LipProduct1Name}}</p>
+		  		</div>
+		  		<div class="lipProdImage">
+		  			<img src= "{{LipProduct2Image}}">
+		  			<p>{{LipProduct2Name}}</p>
+		  		</div>
+		  		<div class="lipProdImage">
+		  			<img src= "{{LipProduct3Image}}">
+		  			<p>{{LipProduct3Name}}</p>
+		  		</div>
+			<!--</div>-->
+    </div>	
 
 
 	<!--<div>
