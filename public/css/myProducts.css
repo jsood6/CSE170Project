@@ -18,8 +18,9 @@ h3{
 	color: pink;
 }
 
-body {
+body{
 	margin: 10px;
+	background-color: #FEDFE3;	
 }
 
 
@@ -66,18 +67,22 @@ body {
 }
 
 
-.productsContainer{
+/*.productsContainer{
 	width: 375px;
-	margin-top: 150px;
+	margin-top: 200px;
 
-}
+}*/
 
 .productsContainer img{
+	
+	max-width: 120px;
+	max-height: 120px;
+	margin-left: 20px;
 	float: left;
-	width: 150px;
+	/*width: 150px;
 	height: 150px;
 	margin-left: 5px;
-	margin-right: 10px;
+	margin-right: 10px;*/
 	margin-top: 20px;
 	border: 2px solid pink;
 
@@ -112,10 +117,10 @@ body {
 
 }
 
-.looksContainer{
+/*.looksContainer{
 	width: 375px;
 	margin-top: 150px;
-}
+}*/
 
 #userLooks img{ /*lookscontainer*/
 	float: left;
@@ -146,6 +151,7 @@ body {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    height: 660px;
 
 }
 
@@ -239,25 +245,27 @@ body {
 
 .modal-content #cameraFile{
 	position: absolute;
-	top:150px;
+	top:100px;
 	max-width: 100px;
 }
 
 #myBtn{
 	/*position: absolute;*/
 
-	top: 273px;
-	left: 28px;
-	width: 150px;
-	height: 150px;
-	border: 2px solid pink;
+	/*top: 273px;
+	left: 28px;*/
+	/*margin-left: 20px;*/
+	width: 120px;
+	height: 120px;
+	/*border: 2px solid pink;*/
 }
 
 #myBtnProducts{
 	/*position: absolute;*/
 	
-	margin-top: 10px;
-	margin-left: 10px;
+	/*margin-top: 10px;
+	margin-left: 10px;*/
+	margin-left: 20px;
 	width: 120px;
 	height: 120px;
 	/*top: 273px;
@@ -276,17 +284,18 @@ body {
 	height: 150px;
 	border: 2px solid pink;*/
 	float: right;
+	margin-right: 50px;
 	width: 120px;
 	height: 120px;
-	border-color: pink;
+	border: 2px solid pink;
 }
 
 .firstLook{
-	position: absolute;
-	top: 273px;
-	left: 193px;
-	width: 150px;
-	height: 150px;
+	/*position: absolute;*/
+	float: right;
+	margin-right: 5px;
+	width: 120px;
+	height: 120px;
 	border: 2px solid pink;
 }
 

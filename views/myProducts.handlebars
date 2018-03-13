@@ -87,7 +87,7 @@
 	</div>
 
 	<div id="userLooks" class="tabcontent">
-	<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg:large" class="firstLook">
+	<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg" class="firstLook">
 		<div class="looksContainer">
 		<!-- Trigger/Open The Modal -->
 			<button id="myBtn" style="font-size: 100px;text-align: center;">+</button> <!-- add looks button -->
@@ -102,12 +102,16 @@
 			  	<span class="close" aria-hidden="true">&times;</span>
 
 			    <div class="modal-content-container">
+			 
 
 			    
-		 	<div class="cameraPicClass" id="cameraFile">
+		 	<div class="cameraPicClass" id="cameraFile" name="lookImage">
+		 		<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
 					<button>
-						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+						<!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+						
 						<input type="file" accept="image/*" id="file-input">
+						
 					</button>
 						<img id="output">
 						<script>
@@ -138,6 +142,9 @@
 						    if (file !== null) {
 						      isFileNull=false;
 						      output.src = URL.createObjectURL(file);
+						     
+    							document.getElementById("lookImageId").src = output.src;
+						      console.log("FILE URL IS: "+ output.src);
 						      var ref = firebase.storage().ref('/looks');
 						      var childRef = ref.child(output.src);
 						      childRef.put(file).then(function(snapshot){
@@ -152,6 +159,8 @@
 						  $("#cameraFile").on("change", function(event){
 						  file = event.target.files[0]; });
 						  var filename = file.name;
+
+
 						  closeModal();
 						}
 
@@ -171,6 +180,7 @@
 							}
 							else{
 								uploadFile();
+
 							}
 							
 						}  
@@ -180,9 +190,19 @@
 			</div><!-- end of cameraPic class-->
 
 
-			<button id="uploadFile" onclick="checkIfFileIsNull();">
-			    	Upload selected file!
-		 		</button>
+			<!--<form id="addLookForm" role="form" method="get" action="/addLooks">-->
+				<!--<input type="text" class="form-control" id="lookImageId" name="lookImage">
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!" onclick="checkIfFileIsNull();"></input>-->
+				
+				<button id="uploadFile" onclick="checkIfFileIsNull();">
+				    	Upload selected file!
+			 	</button>
+			 
+
+			 <!--<button type="submit" name="lookImage" value="someValue" ></button>-->
+
+		 	<!--</form>-->
+		
 
 			  </div>
 			</div><!-- end of modal content-->
@@ -190,11 +210,14 @@
 
 			</div><!-- end of modal class-->
 
+		<p><br>March 6th<br></p>
 		{{#each looksData.looks}}
 		<div class="looksInProfile">
 			<img src="{{imageURL}}" class="img-responsive">
 		</div>
 		{{/each}}
+
+		<img src="" style="border:0;" id="lookImageId">
 			
 	  
 	</div>

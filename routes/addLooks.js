@@ -3,7 +3,7 @@ var productsData = require("../products.json");
 
 exports.addLooks = function(req, res){
 	var newLook = {
-		"imageURL" : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOeK6MExynZT7tEYFipQaFxqPzXyjlzRyG7suMcewbzgIdLfrLjQ'
+		"imageURL" : req.query.lookImage
 		
 	};
 
