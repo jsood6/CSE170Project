@@ -279,8 +279,10 @@ body{
 	/*margin-left: 20px;*/
 	top:220px;
 	margin-left: 10px;
+	margin-right: 10px;
 	width: 120px;
-	height: 120px;
+	max-width: 120px;
+	max-height: 120px;
 	margin-top: 20px;
 	/*border: 2px solid pink;*/
 }
@@ -292,8 +294,10 @@ body{
 	margin-left: 10px;*/
 	top:220px;
 	margin-left: 20px;
+	margin-right: 10px;
 	width: 120px;
-	height: 120px;
+	max-width: 120px;
+	max-height: 120px;
 	margin-top: 20px;
 	/*top: 273px;
 	left: 28px;
