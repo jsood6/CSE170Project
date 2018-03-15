@@ -90,7 +90,7 @@
 	<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg" style="margin-left: 30px;" class="firstLook">
 		<div class="looksContainer">
 		<!-- Trigger/Open The Modal -->
-			<button id="myBtn" style="font-size: 100px;text-align: center;">+</button> <!-- add looks button -->
+			<button id="myBtn" style=" font-size: 100px;text-align: center;">+</button> <!-- add looks button -->
 			
 
 			<!-- The Modal -->
@@ -159,6 +159,7 @@
 						     
     							document.getElementById("lookImageId").src = output.src;
     							document.getElementById("lookImageId").style.visibility = 'visible';
+    							document.getElementById("dateUploaded").style.visibility = 'visible';
     							
     							/*var newLook1 = {
 									"imageURL" : output.src
@@ -266,6 +267,7 @@
 		</div>
 		{{/each}}
 
+		<p id="dateUploaded" style="visibility: hidden; margin-top: 30px;"><br>March 15th<br></p>
 		<img src="" style="border:0; visibility: hidden;" id="lookImageId">
 			
 	  
