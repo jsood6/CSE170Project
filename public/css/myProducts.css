@@ -139,6 +139,7 @@ body{
 
 .looksContainer{
 	margin-left: 25px;
+	margin-top: 150px;
 }
 
 #userLooks img{ /*lookscontainer*/
@@ -271,12 +272,12 @@ body{
 }
 
 #myBtn{
-	/*position: absolute;*/
+	position: absolute;
 
 	/*top: 273px;
 	left: 28px;*/
 	/*margin-left: 20px;*/
-	top:0px;
+	top:220px;
 	margin-left: 10px;
 	width: 120px;
 	height: 120px;
@@ -325,9 +326,10 @@ body{
 	width: 120px;
 	height: 120px;
 	border: 2px solid pink;*/
-	left:100px;
+	/*position: absolute;*/
+	margin-left: 150px;
 	margin-top: 20px;
-	float: right;
+	/*float: right;*/
 	width: 120px;
 	height: 120px;
 	border: 2px solid pink;
