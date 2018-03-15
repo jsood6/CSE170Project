@@ -1,5 +1,8 @@
 
 var data = require('../data.json')['videos'];
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
 
 exports.videoInfo = function(request, response) { 
 	var videoID = request.params.id;

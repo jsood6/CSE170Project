@@ -9,6 +9,7 @@ exports.addLooks = function(req, res){
 
 	console.log(newLook);
 	looksDataAdd.looks.push(newLook);
+	console.log(looksDataAdd);
 	//productsData['products'].push(newProduct);
 	//delete productsData.products[5];
 	/*delete productsData.products[6];

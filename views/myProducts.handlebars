@@ -87,7 +87,7 @@
 	</div>
 
 	<div id="userLooks" class="tabcontent">
-	<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg" class="firstLook">
+	<img src="https://pbs.twimg.com/media/CwzCfpFUcAESuDY.jpg" style="margin-left: 30px;" class="firstLook">
 		<div class="looksContainer">
 		<!-- Trigger/Open The Modal -->
 			<button id="myBtn" style="font-size: 100px;text-align: center;">+</button> <!-- add looks button -->
@@ -106,18 +106,32 @@
 
 			    
 		 	<div class="cameraPicClass" id="cameraFile" name="lookImage">
-		 		<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-					<button>
+		 		<!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+					<!--<button>-->
 						<!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+						<!--<button>-->
+						    <!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+						<!--<div class="input-group-addon">
+						<input type="file" accept="image/*" id="file-input">-->
+					<!--</button>-->
+					<div class="input-group">
+					    <!--<div class="input-group-addon">
+					      <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+					    </div>-->
+					    <input type="file"  value="&#xf0f6" placeholder="fa fa-camera" accept="image/*" id="file-input">
+					  </div>
 						
-						<input type="file" accept="image/*" id="file-input">
 						
-					</button>
+					<!--</button>-->
 						<img id="output">
 						<script>
 
+						//var datafile = require('../looks.json');
+
 						let file;
 						let isFileNull;
+						//var fs = require('../looks.json');
+						
 						const fileInput = document.getElementById('file-input');
 						function sendPic(){
 							var file = fileInput.files[0];
@@ -144,6 +158,40 @@
 						      output.src = URL.createObjectURL(file);
 						     
     							document.getElementById("lookImageId").src = output.src;
+    							document.getElementById("lookImageId").style.visibility = 'visible';
+    							
+    							/*var newLook1 = {
+									"imageURL" : output.src
+		
+									};*/
+
+								
+
+								/*fs.readFile('./looks.json', 'utf-8', function(err, data) {
+									if (err) throw err
+
+									var arrayOfObjects = JSON.parse(data);
+								arrayOfObjects.users.push({
+										imageURL: output.src
+										
+									});
+
+									console.log(arrayOfObjects);
+								});*/
+
+								/*document.looksData.looks.push({
+									imageURL: output.src
+								});*/
+
+								
+
+								/*window.looksData.writeFile('./looks.json', JSON.stringify(arrayOfObjects), 'utf-8', function(err) {
+									if (err) throw err
+									console.log('Done!');
+								});*/
+
+								
+
 						      console.log("FILE URL IS: "+ output.src);
 						      var ref = firebase.storage().ref('/looks');
 						      var childRef = ref.child(output.src);
@@ -192,16 +240,17 @@
 
 			<!--<form id="addLookForm" role="form" method="get" action="/addLooks">-->
 				<!--<input type="text" class="form-control" id="lookImageId" name="lookImage">
-				<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!" onclick="checkIfFileIsNull();"></input>-->
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!" onclick="checkIfFileIsNull();">-->
 				
 				<button id="uploadFile" onclick="checkIfFileIsNull();">
 				    	Upload selected file!
 			 	</button>
 			 
 
-			 <!--<button type="submit" name="lookImage" value="someValue" ></button>-->
+			 <!--<input type="text" style="display: none;" id="lookImageInput" name="lookImage" value="">
+			 <input type="submit" id="submitBtn" class="btn btn-default" value="Add product!" onclick="checkIfFileIsNull();">
 
-		 	<!--</form>-->
+		 	</form>-->
 		
 
 			  </div>
@@ -217,7 +266,7 @@
 		</div>
 		{{/each}}
 
-		<img src="" style="border:0;" id="lookImageId">
+		<img src="" style="border:0; visibility: hidden;" id="lookImageId">
 			
 	  
 	</div>

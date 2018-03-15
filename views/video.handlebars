@@ -7,17 +7,17 @@
 	<meta name="viewport" content="width=device-width,
 	initial-scale=1.0">
 	<!-- importing css(bootstrap) files into html -->
-	<!--<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/loginPage.css">-->
+	<!--<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="/css/loginPage.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<link rel="stylesheet" type="text/css" href="/css/video.css">
 
 
 	<!-- Add icon library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 
 
@@ -27,10 +27,178 @@
 
 	<nav class="navbar navbar-light bg-faded" id="navbar">
 		  <form class="form-inline">
-	  		<input type="button" value="<" onclick="history.back()">
+	  		<!--<input type="button" value="<" onclick="history.back()">-->
+	  		<button onClick="location.href='/index'" class="btn btn-outline-success" style="background-color: transparent; float: left; left:5px; top:0px; " type="button">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</button>
+
 	  		<div class="navbar-text">{{LookName}}</div>
+	  		
+
 	  	</form>
 	</nav>
+
+	<button id=videoPageCamera class="btn btn-outline-success" style="position: absolute; float:right; display: inline; top:25px; right: 5px; background-color: transparent;">
+	  			<span class="glyphicon glyphicon-camera" style="color: black" aria-hidden="true"></span>
+			</button>
+
+	
+
+	<!-- The Modal -->
+			<div id="myModalVideo" class="modalVideo">
+
+			  <!-- Modal content -->
+			  <div class="modal-content-video">
+			  	<h3><b>After finishing the video, Select or take a selfie to record your new makeup look!</b></h3>
+			  	<span class="closeVideo" aria-hidden="true">&times;</span>
+
+			    <div class="modal-content-container-video">
+	<div class="cameraPicClass" id="cameraFile" name="lookImage">
+		 		<!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+					<!--<button>-->
+						<!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+						<!--<button>-->
+						    <!--<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>-->
+						<!--<div class="input-group-addon">
+						<input type="file" accept="image/*" id="file-input">-->
+					<!--</button>-->
+					<div class="input-group">
+					    <!--<div class="input-group-addon">
+					      <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+					    </div>-->
+					    <input type="file"  value="&#xf0f6" placeholder="fa fa-camera" accept="image/*" id="file-input">
+					  </div>
+						
+						
+					<!--</button>-->
+						<img id="output">
+						<script>
+
+						//var datafile = require('../looks.json');
+
+						let file;
+						let isFileNull;
+						//var fs = require('../looks.json');
+						
+						const fileInput = document.getElementById('file-input');
+						function sendPic(){
+							var file = fileInput.files[0];
+						}
+
+  						fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+
+  						/*fileInput.addEventListener('change', sendPic, false);*/
+
+  						const output = document.getElementById('output');
+
+						  function doSomethingWithFiles(fileList) {
+						    file = null;
+
+						    for (let i = 0; i < fileList.length; i++) {
+						      if (fileList[i].type.match(/^image\//)) {
+						        file = fileList[i];
+						        break;
+						      }
+						    }
+
+						    if (file !== null) {
+						      isFileNull=false;
+						      output.src = URL.createObjectURL(file);
+						     
+    							
+    							
+    							/*var newLook1 = {
+									"imageURL" : output.src
+		
+									};*/
+
+								
+
+								/*fs.readFile('./looks.json', 'utf-8', function(err, data) {
+									if (err) throw err
+
+									var arrayOfObjects = JSON.parse(data);
+								arrayOfObjects.users.push({
+										imageURL: output.src
+										
+									});
+
+									console.log(arrayOfObjects);
+								});*/
+
+								/*document.looksData.looks.push({
+									imageURL: output.src
+								});*/
+
+								
+
+								/*window.looksData.writeFile('./looks.json', JSON.stringify(arrayOfObjects), 'utf-8', function(err) {
+									if (err) throw err
+									console.log('Done!');
+								});*/
+
+								
+
+						      console.log("FILE URL IS: "+ output.src);
+						      var ref = firebase.storage().ref('/looks');
+						      var childRef = ref.child(output.src);
+						      childRef.put(file).then(function(snapshot){
+						      	console.log('uploaded a file!');
+						      });
+
+						    }
+						  }
+
+						  function uploadFile(){
+						  var storageRef = firebase.storage().ref('/looks');
+						  $("#cameraFile").on("change", function(event){
+						  file = event.target.files[0]; });
+						  var filename = file.name;
+
+
+						  //closeModal();
+						}
+
+						function closeModal(){
+							modal.style.display = "none";
+							alertSuccessfulFileUpload();
+
+						}
+
+						function alertSuccessfulFileUpload(){
+							alert("successfully uploaded image!");
+						}
+						function checkIfFileIsNull(){
+							if(file == null){
+								isFileNull= true;
+								alert("No image selected: please select an image to upload!");
+							}
+							else{
+								uploadFile();
+
+							}
+							
+						}  
+
+						</script>
+					<!--</button>-->
+			</div><!-- end of cameraPic class-->
+				</div>
+				<button id="uploadFile" onclick="checkIfFileIsNull();">
+				    	Upload selected file!
+			 	</button>
+			</div>
+		</div>
+
+
+
+			<!--<form id="addLookForm" role="form" method="get" action="/addLooks">-->
+				<!--<input type="text" class="form-control" id="lookImageId" name="lookImage">
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Add product!" onclick="checkIfFileIsNull();">-->
+				
+				
+
+
 
 	
 	<div class="videoSize">
@@ -111,14 +279,14 @@
 		<iframe src="{{link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>-->
 
-	
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 	<!-- importing javascript files into html -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<!--<script src="js/jquery-1.11.0.js"></script>-->
+	<script src="/js/jquery-1.11.0.js"></script>
 	<!--<script src="js/bootstrap.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/loginPage.js"></script>
-	<script src="js/index.js"></script>-->
+	<script src="js/bootstrap.min.js"></script>-->
+	<script src="/js/loginPage.js"></script>
+	<script src="/js/index.js"></script>
 	
 	<script src="/js/video.js"></script>
   	
