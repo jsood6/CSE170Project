@@ -83,6 +83,10 @@ body{
     display: none;
 }*/
 
+.productsContainer{
+	margin-top: 150px;
+}
+
 .productsContainer img{
 	
 	width: 120px;
@@ -281,11 +285,11 @@ body{
 }
 
 #myBtnProducts{
-	/*position: absolute;*/
+	position: absolute;
 	
 	/*margin-top: 10px;
 	margin-left: 10px;*/
-	top:0px;
+	top:220px;
 	margin-left: 20px;
 	width: 120px;
 	height: 120px;
